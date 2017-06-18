@@ -1,3 +1,3 @@
 #!/bin/bash
 
-rsync -avz . nadvornix_calculusmadeeasy@ssh.phx.nearlyfreespeech.net:/home/public/ 
+rsync --exclude .git -avz . nadvornix_calculusmadeeasy@ssh.phx.nearlyfreespeech.net:/home/public/
