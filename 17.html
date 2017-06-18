@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Integration | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 17}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Integration</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>The great secret has already been revealed that this
+mysterious symbol $\int$, which is after all only a long $S$,
+merely means “the sum of,” or “the sum of all such
+quantities as.” It therefore resembles that other
+symbol $\sum$ (the Greek <em>Sigma</em>), which is also a sign
+of summation. There is this difference, however, in
+the practice of mathematical men as to the use of
+these signs, that while $\sum$ is generally used to indicate
+the sum of a number of finite quantities, the integral
+sign $\int$ is generally used to indicate the summing up
+of a vast number of small quantities of indefinitely
+minute magnitude, mere elements in fact, that go
+to make up the total required. Thus $\int dy = y$, and
+$\int dx = x$.
+
+<p>Any one can understand how the whole of anything
+can be conceived of as made up of a lot of little bits;
+and the smaller the bits the more of them there will
+be. Thus, a line one inch long may be conceived as
+made up of $10$ pieces, each $\frac{1}{10}$ of an inch long; or
+of $100$ parts, each part being $\frac{1}{100}$ of an inch long;
+
+or of $1,000,000$ parts, each of which is $\frac{1}{1,000,000}$ of an
+inch long; or, pushing the thought to the limits of
+conceivability, it may be regarded as made up of
+an infinite number of elements each of which is
+infinitesimally small.
+
+<p>Yes, you will say, but what is the use of thinking
+of anything that way? Why not think of it straight
+off, as a whole? The simple reason is that there are
+a vast number of cases in which one cannot calculate
+the bigness of the thing as a whole without reckoning
+up the sum of a lot of small parts. The process of
+“<em>integrating</em>” is to enable us to calculate totals that
+otherwise we should be unable to estimate directly.
+
+<p>Let us first take one or two simple cases to
+familiarize ourselves with this notion of summing
+up a lot of separate parts.
+
+<p>Consider the series:
+\[
+1 + \tfrac{1}{2} + \tfrac{1}{4} + \tfrac{1}{8}
+  + \tfrac{1}{16} + \tfrac{1}{32} + \tfrac{1}{64} + \text{etc.}
+\]
+
+<p>Here each member of the series is formed by taking
+it half the value of the preceding. What is the value
+of the total if we could go on to an infinite number
+of terms? Every schoolboy knows that the answer
+is $2$. Think of it, if you like, as a line. Begin with
+one inch; add a half inch, add a quarter; add an
+eighth; and so on. If at any point of the operation
+we stop, there will still be a piece wanting to make
+up the whole $2$ inches; and the piece wanting will
+always be the same size as the last piece added.
+Thus, if after having put together $1$, $\frac{1}{2}$, and $\frac{1}{4}$, we stop,
+there will be $\frac{1}{4}$ wanting. If we go on till we have
+added $\frac{1}{64}$, there will still be $\frac{1}{64}$ wanting. The
+remainder needed will always be equal to the last
+term added. By an infinite number of operations
+only should we reach the actual $2$ inches. Practically
+we should reach it when we got to pieces so small
+that they could not be drawn–that would be after
+about $10$ terms, for the eleventh term is $\frac{1}{1024}$. If we
+want to go so far that not even a Whitworth's
+measuring machine would detect it, we should merely
+have to go to about $20$ terms. A microscope would
+not show even the $18^{\text{th}}$ term! So the infinite number
+of operations is no such dreadful thing after all.
+The <em>integral</em> is simply the whole lot. But, as we
+shall see, there are cases in which the integral
+calculus enables us to get at the <em>exact</em> total that
+there would be as the result of an infinite number
+of operations. In such cases the integral calculus
+gives us a <em>rapid</em> and easy way of getting at a result
+that would otherwise require an interminable lot of
+elaborate working out. So we had best lose no time
+in learning <em>how to integrate</em>.
+
+<a name="figure46">
+<p><img src="33283-t/images/195a.pdf.png-1.png">
+
+
+<p><h2>Slopes of Curves, and the Curves themselves.</h2>
+
+<p>Let us make a little preliminary enquiry about the
+slopes of curves. For we have seen that differentiating
+a curve means finding an expression for its slope (or
+for its slopes at different points). Can we perform
+the reverse process of reconstructing the whole curve
+if the slope (or slopes) are prescribed for us?
+
+<p>Go back to case (2) on <a href="10.html#Case2">here</a>. Here we have the
+simplest of curves, a sloping line with the equation
+\[
+y = ax+b.
+\]
+<p><a name="figure47">
+<p><img src="33283-t/images/197a.pdf.png-1.png">
+
+<p>We know that here $b$ represents the initial height
+of $y$ when $x= 0$, and that $a$, which is the same as $\dfrac{dy}{dx}$,
+is the “slope” of the line. The line has a constant
+slope. All along it the elementary triangles
+<p><a name="figure197b">
+<p><img src="33283-t/images/197b.pdf.png-1.png">
+<p>have the same proportion between height and base.
+Suppose we were to take the $dx$'s, and $dy$'s of finite
+magnitude, so that $10$ $dx$'s made up one inch, then
+there would be ten little triangles like
+
+<p>
+<a name="figure198a">
+<p><img src="33283-t/images/198a.pdf.png-1.png">
+
+<p>Now, suppose that we were ordered to reconstruct
+the “curve,” starting merely from the information
+that $\dfrac{dy}{dx} = a$. What could we do? Still taking the
+little $d$'s as of finite size, we could draw $10$ of them,
+all with the same slope, and then put them together,
+end to end, like this:
+<p><a name="figure48">
+<p><img src="33283-t/images/198b.pdf.png-1.png">
+<p>
+And, as the slope is the same for all, they would join
+to make, as in <a href="#figure48">Figure 48</a>, a sloping line sloping with the
+correct slope $\dfrac{dy}{dx} = a$. And whether we take the $dy$'s
+and $dx$'s as finite or infinitely small, as they are all
+
+alike, clearly $\dfrac{y}{x} = a$, if we reckon $y$ as the total of
+all the $dy$'s, and $x$ as the total of all the $dx$'s. But
+whereabouts are we to put this sloping line? Are
+we to start at the origin $O$, or higher up? As the
+only information we have is as to the slope, we are
+without any instructions as to the particular height
+above $O$; in fact the initial height is undetermined.
+The slope will be the same, whatever the initial height.
+Let us therefore make a shot at what may be wanted,
+and start the sloping line at a height $C$ above $O$.
+That is, we have the equation
+\[
+y = ax + C.
+\]
+
+<p>It becomes evident now<a name="constant"/> that in this case the added
+constant means the particular value that $y$ has when
+$x = 0$.
+
+<p>Now let us take a harder case, that of a line, the
+slope of which is not constant, but turns up more and
+more. Let us assume that the upward slope gets
+greater and greater in proportion as $x$ grows. In
+symbols this is:
+\[
+\frac{dy}{dx} = ax.
+\]
+Or, to give a concrete case, take $a = \frac{1}{5}$, so that
+\[
+\frac{dy}{dx} = \tfrac{1}{5} x.
+\]
+
+<p>Then we had best begin by calculating a few of
+the values of the slope at different values of $x$, and
+also draw little diagrams of them.
+
+   When
+<table>
+  <tr><td>$x =0$</td><td>$ \frac{dy}{dx} = 0,   $</td><td><a name="figure200a1">
+<p><img src="33283-t/images/200a1.pdf.png-1.png"></td></tr>
+<tr><td>$x =1$</td><td>$ \frac{dy}{dx} = 0.2, $</td><td><a name="figure200a2">
+<p><img src="33283-t/images/200a2.pdf.png-1.png"></td></tr>
+<tr><td>$x =2$</td><td>$ \frac{dy}{dx} = 0.4, $</td><td><a name="figure200a3">
+<p><img src="33283-t/images/200a3.pdf.png-1.png"></td></tr>
+<tr><td>$x =3$</td><td>$ \frac{dy}{dx} = 0.6, $</td><td><a name="figure200a4">
+<p><img src="33283-t/images/200a4.pdf.png-1.png"></td></tr>
+<tr><td>$x =4$</td><td>$ \frac{dy}{dx} = 0.8, $</td><td><a name="figure200a5">
+<p><img src="33283-t/images/200a5.pdf.png-1.png"></td></tr>
+<tr><td>$x =5$</td><td>$ \frac{dy}{dx} = 1.0. $</td><td><a name="figure200a6">
+<p><img src="33283-t/images/200a6.pdf.png-1.png"></td></tr>
+</table>
+
+<p>Now try to put the pieces together, setting each so
+that the middle of its base is the proper distance to
+the right, and so that they fit together at the corners;
+thus (<a href="#figure49">Figure 49</a>). The result is, of course, not a smooth
+curve: but it is an approximation to one. If we had
+taken bits half as long, and twice as numerous, like
+<a href="#figure50">Figure 50</a>, we should have a better approximation. But
+
+for a perfect curve we ought to take each $dx$ and its
+corresponding $dy$ infinitesimally small, and infinitely
+numerous.
+
+<a name="figure49">
+<p><img src="33283-t/images/200b.pdf.png-1.png">
+
+<a name="figure50">
+<p><img src="33283-t/images/201a.pdf.png-1.png">
+<p>Then, how much ought the value of any $y$ to be?
+Clearly, at any point $P$ of the curve, the value of $y$
+will be the sum of all the little $dy$'s from $0$ up to
+that level, that is to say, $\int dy = y$. And as each $dy$ is
+equal to $\frac{1}{5}x · dx$, it follows that the whole $y$ will be
+equal to the sum of all such bits as $\frac{1}{5}x · dx$, or, as we
+should write it, $\int \tfrac{1}{5}x · dx$.
+
+<p>Now if $x$ had been constant, $\int \tfrac{1}{5}x · dx$ would have
+been the same as $\frac{1}{5} x \int dx$, or $\frac{1}{5}x^2$. But $x$ began by
+being $0$, and increases to the particular value of $x$ at
+the point $P$, so that its average value from $0$ to that
+point is $\frac{1}{2}x$. Hence $\int \tfrac{1}{5} x\, dx = \tfrac{1}{10} x^2$; or $y=\frac{1}{10}x^2$.
+
+<p>But, as in the previous case, this requires the addition
+of an undetermined constant $C$, because we have not
+
+been told at what height above the origin the curve
+will begin, when $x = 0$. So we write, as the equation
+of the curve drawn in <a href="#figure51">Figure 51</a>,
+\[
+y = \tfrac{1}{10}x^2 + C.
+\]
+<a name="figure51">
+<p><img src="33283-t/images/202a.pdf.png-1.png">
+
+<p>
+<hr><h3>Exercises XVI</h3>
+
+(1) Find the ultimate sum of $\frac{2}{3} + \frac{1}{3} + \frac{1}{6} + \frac{1}{12} + \frac{1}{24} + \text{etc}$.
+
+<p>(2) Show that the series $1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \frac{1}{7}$ etc.,
+is convergent, and find its sum to $8$ terms.
+
+<p>(3) If $\log_\epsilon(1+x) = x - \dfrac{x^2}{2} + \dfrac{x^3}{3} - \dfrac{x^4}{4} + \text{etc}$., find $\log_\epsilon 1.3$.
+
+<p>(4) Following a reasoning similar to that explained
+in this chapter, find $y$,
+\[
+(a) \text{if}\; \frac{dy}{dx} = \tfrac{1}{4} x;&nbsp;&nbsp;
+(b) \text{if}\; \frac{dy}{dx} = \cos x.
+\]
+
+<p>(5) If $\dfrac{dy}{dx} = 2x + 3$, find $y$.
+
+
+<p><h3 class="answers">Answers</h3>
+<p>(1)   $1\frac{1}{3}$.
+
+<p>(2)   $0.6344$.
+
+<p>(3)   $0.2624$.
+
+
+<p>(4)   (<em>a</em> ) $y = \frac{1}{8} x^2 + C$;&nbsp;&nbsp;
+     (<em>b</em> ) $y = \sin x + C$.
+
+<p>(5)   $y = x^2 + 3x + C$.
+<br>
+<hr>
+<a href="18.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Dodges, Pitfalls, and Triumphs | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 20}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Dodges, Pitfalls, and Triumphs</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p><em>Dodges.</em> A great part of the labour of integrating
+things consists in licking them into some shape that
+can be integrated. The books–and by this is meant
+the serious books–on the Integral Calculus are full
+of plans and methods and dodges and artifices for
+this kind of work. The following are a few of
+them.
+
+<p><em>Integration by Parts.</em><a name="intparts"/> This name is given to a
+dodge, the formula for which is
+\[
+\int u\, dx = ux - \int x\, du + C.
+\]
+It is useful in some cases that you can't tackle
+directly, for it shows that if in any case $\int x\, du$ can
+be found, then $\int u\, dx$ can also be found. The formula
+can be deduced as follows. From <a href="6.html#differprod">here</a>, we have,
+\[
+d(ux) = u\, dx + x\, du,
+\]
+which may be written
+\[
+u(dx) = d(ux) - x\, du,
+\]
+which by direct integration gives the above expression.
+
+
+<p>
+<p><em>Examples</em>
+(1) Find $\int w · \sin w\, dw$.
+
+<p>Write $u = w$, and for $\sin w · dw$ write $dx$. We shall
+then have $du = dw$, while $\int \sin w · dw = -\cos w = x$.
+
+<p>Putting these into the formula, we get
+\begin{align*}
+\int w · \sin w\, dw &= w(-\cos w) - \int -\cos w\, dw  \\
+                     &=-w \cos w + \sin w + C.
+\end{align*}
+
+<p>(2) Find $\int x \epsilon^x\, dx$.
+\begin{align*}
+   \text{Write}\;
+ u &=  x, & \epsilon^x\, dx&=dv; \\
+ \text{then }\;
+du &= dx, & v &=\epsilon^x,
+\end{align*}
+
+ and
+\[
+\int x\epsilon^x\, dx
+   = x\epsilon^x - \int \epsilon^x\, dx
+      \quad \text{(by the formula)} \\
+   = x \epsilon^x - \epsilon^x = \epsilon^x(x-1) + C.
+\]
+
+<p>(3) Try $\int \cos^2 \theta\, d\theta$.<a name="moreexamples"/>
+\begin{align*}
+u &= \cos \theta, &\cos \theta\, d\theta &= dv. \\
+   \text{Hence }\;
+du&= -\sin \theta\, d\theta, & v &=\sin \theta,
+\end{align*}
+\begin{align*}
+\int \cos^2 \theta\, d\theta
+  &= \cos \theta \sin \theta+ \int \sin^2 \theta\, d\theta       \\
+  &= \frac{2 \cos\theta \sin\theta}{2} +\int(1-\cos^2 \theta)\, d\theta  \\
+  &= \frac{\sin 2\theta}{2} + \int d\theta - \int \cos^2 \theta\, d\theta.
+\end{align*}
+\begin{align*}
+   \text{Hence}\;
+2 \int \cos^2 \theta\, d\theta
+  &= \frac{\sin 2\theta}{2} + \theta \\
+ and
+\int \cos^2 \theta\, d\theta
+  &= \frac{\sin 2\theta}{4} + \frac{\theta}{2} + C.
+\end{align*}
+
+
+<p>(4) Find $\int x^2 \sin x\, dx$.
+
+\begin{align*}
+   \text{Write }\;
+x^2  &= u, & \sin x\, dx &= dv; \\
+ \text{then }\;
+du &= 2x\, dx, & v &= -\cos x,
+\end{align*}
+\[
+\int x^2 \sin x\, dx = -x^2 \cos x + 2 \int x \cos x\, dx.
+\]
+
+<p>Now find $\int x \cos x\, dx$, integrating by parts (as in
+Example 1 above):
+\[
+\int x \cos x\, dx = x \sin x + \cos x+C.
+\]
+
+<p>Hence
+\begin{align*}
+\int x^2 \sin x\, dx
+  &= -x^2 \cos x + 2x \sin x + 2 \cos x + C' \\
+  &= 2 \left[ x \sin x + \cos x \left(1 - \frac{x^2}{2}\right) \right] +C'.
+\end{align*}
+
+<p>(5) Find $\int \sqrt{1-x^2}\, dx$.
+\begin{align*}
+ \text{Write}\;
+u &= \sqrt{1-x^2},\quad dx=dv;  \\
+ \text{then }\;
+du &= -\frac{x\, dx}{\sqrt{1-x^2}}\quad \text{(see Chap. IX.,)}
+\end{align*}
+and $x=v$; so that
+\[
+\int \sqrt{1-x^2}\, dx=x \sqrt{1-x^2} + \int \frac{x^2\, dx}{\sqrt{1-x^2}}.
+\]
+
+<p>Here we may use a little dodge, for we can write
+\[
+\int \sqrt{1-x^2}\, dx
+  = \int \frac{(1-x^2)\, dx}{\sqrt{1-x^2}}
+  = \int \frac{dx}{\sqrt{1-x^2}} - \int \frac{x^2\, dx}{\sqrt{1-x^2}}.
+\]
+
+<p>Adding these two last equations, we get rid of
+$\int \dfrac{x^2\, dx}{\sqrt{1-x^2}}$, and we have
+\[
+2 \int \sqrt{1-x^2}\, dx = x\sqrt{1-x^2} + \int \frac{dx}{\sqrt{1-x^2}}.
+\]
+
+
+<p>Do you remember meeting $\dfrac {dx}{\sqrt{1-x^2}}$? it is got by
+differentiating $y=\arcsin x$ (see <a href="15.html#intex3">here</a>); hence its integral
+is $\arcsin x$, and so
+\[
+\int \sqrt{1-x^2}\, dx = \frac{x \sqrt{1-x^2}}{2} + \tfrac{1}{2} \arcsin x +C.
+\]
+
+<p>You can try now some exercises by yourself; you
+will find some at the end of this chapter.
+
+<p><em>Substitution.</em> This is the same dodge as explained
+in <a href="9.html">Chap. IX</a>. Let us illustrate its application
+to integration by a few examples.
+
+<p>(1)
+
+$\int \sqrt{3+x}\, dx$.
+\begin{align*}
+   Let
+3+x &= u,\quad dx = du; \\
+ replace
+\int u^{\frac{1}{2}}\, du
+  &= \tfrac{2}{3} u^{\frac{3}{2}} = \tfrac{2}{3}(3+x)^{\frac{3}{2}}.
+\end{align*}
+
+<p>(2) $\int \dfrac{dx}{\epsilon^x+\epsilon^{-x}}$.
+
+   Let
+ \[
+\epsilon^x = u,\quad \frac{du}{dx} = \epsilon^x,\quad\text{and}\quad
+dx = \frac{du}{\epsilon^x}; \\
+\]
+ so that
+ \[
+\int \frac{dx}{\epsilon^x+\epsilon^{-x}}
+  = \int \frac{du}{\epsilon^x(\epsilon^x+\epsilon^{-x})}
+  = \int \frac{du}{u\left(u + \dfrac{1}{u}\right)}
+  = \int \frac{du}{u^2+1}.
+\]
+
+<p>$\dfrac{du}{1+u^2}$ is the result of differentiating $\arctan x$.
+
+<p>Hence the integral is $\arctan \epsilon^x$.
+
+<p>(3) $\int \dfrac{dx}{x^2+2x+3} = \int \dfrac{dx}{x^2+2x+1+2} = \int \dfrac{dx}{(x+1)^2+(\sqrt 2)^2}$.
+
+
+<p>   Let $x+1=u,\quad dx=du$; then the integral becomes $\int \dfrac{du}{u^2+(\sqrt2)^2}$; but $\dfrac{du}{u^2+a^2}$ is
+the result of differentiating $u=\dfrac{1}{a} \arctan \dfrac{u}{a}$.
+
+<p>Hence one has finally $\dfrac{1}{\sqrt2} \arctan \dfrac{x+1}{\sqrt 2}$ for the value
+of the given integral.
+
+<p><em>Formulæ of Reduction</em> are special forms applicable
+chiefly to binomial and trigonometrical expressions
+that have to be integrated, and have to be reduced
+into some form of which the integral is known.
+
+<p><em>Rationalization</em> , and <em>Factorization of Denominator</em>
+are dodges applicable in special cases, but they do not
+admit of any short or general explanation. Much
+practice is needed to become familiar with these preparatory
+processes.
+
+<p>The following example shows how the process of
+splitting<a name="partfracs"/> into partial fractions, which we learned in
+Chap. XIII., <a href="13.html#partfracs2">here</a>, can be made use of in integration.
+
+<p>Take again $\int \dfrac{dx}{x^2+2x+3}$; if we split $\dfrac{1}{x^2+2x+3}$
+into partial fractions, this becomes (see <a href="20.html#partfracs3">here</a>):
+\[
+\dfrac{1}{2\sqrt{-2}} \left[\int \dfrac{dx}{x+1-\sqrt{-2}} - \int \dfrac{dx}{x+1+\sqrt{-2}} \right]
+\]
+\[
+=\dfrac{1}{2\sqrt{-2}} \log_\epsilon \dfrac{x+1-\sqrt{-2}}{x+1+\sqrt{-2}}.
+\]
+Notice that the same integral can be expressed
+
+sometimes in more than one way (which are equivalent
+to one another).
+
+<p><em>Pitfalls.</em> A beginner is liable to overlook certain
+points that a practised hand would avoid; such as
+the use of factors that are equivalent to either zero or
+infinity, and the occurrence of indeterminate quantities
+such as $\tfrac{0}{0}$. There is no golden rule that will meet
+every possible case. Nothing but practice and intelligent
+care will avail. An example of a pitfall which
+had to be circumvented arose in <a href="18.html">Chap. XVIII</a>,
+when we came to the problem of integrating $x^{-1}\, dx$.
+
+<p><em>Triumphs.</em> By triumphs must be understood the
+successes with which the calculus has been applied to
+the solution of problems otherwise intractable. Often
+in the consideration of physical relations one is able
+to build up an expression for the law governing the
+interaction of the parts or of the forces that govern
+them, such expression being naturally in the form of
+a <em>differential equation</em>, that is an equation containing
+differential coefficients with or without other algebraic
+quantities. And when such a differential equation
+has been found, one can get no further until it has
+been integrated. Generally it is much easier to state
+the appropriate differential equation than to solve it:–the
+real trouble begins then only when one wants to
+integrate, unless indeed the equation is seen to possess
+some standard form of which the integral is known,
+and then the triumph is easy. The equation which
+results from integrating a differential equation is
+
+called* its “solution”; and it is quite astonishing
+how in many cases the solution looks as if it had no
+relation to the differential equation of which it is
+the integrated form. The solution often seems as
+different from the original expression as a butterfly
+does from the caterpillar that it was. Who would
+have supposed that such an innocent thing as
+\[
+\dfrac{dy}{dx} = \dfrac{1}{a^2-x^2}
+\]
+could blossom out into
+\[
+y = \dfrac{1}{2a} \log_\epsilon \dfrac{a+x}{a-x} + C?
+\]
+yet the latter is the <em>solution</em>  of the former.
+
+<p><note>*This means that the actual result of solving it is called its
+“solution.” But many mathematicians would say, with Professor
+Forsyth, “every differential equation <em>is considered as solved</em> when
+the value of the dependent variable is expressed as a function of
+the independent variable by means either of known functions, or of
+integrals, whether the integrations in the latter can or cannot be
+expressed in terms of functions already known.”</note>
+
+<p>As a last example, let us work out the above together.
+
+<p>By partial fractions,<a name="partfracs3"/>
+\begin{align*}
+\frac{1}{a^2-x^2} &= \frac{1}{2a(a+x)} + \frac{1}{2a(a-x)},  \\
+dy &= \frac {dx}{2a(a+x)}+ \frac{dx}{2a(a-x)},  \\
+y  &= \frac{1}{2a}
+       \left( \int \frac{dx}{a+x}
+            + \int \frac{dx}{a-x} \right)  \\
+   &= \frac{1}{2a} \left(\log_\epsilon (a+x) - \log_\epsilon (a-x) \right)  \\
+   &= \frac{1}{2a} \log_\epsilon \frac{a+x}{a-x} + C.
+\end{align*}
+
+
+  Not a very difficult metamorphosis!
+
+<p>There are whole treatises, such as Boole's <em>Differential
+Equations</em> , devoted to the subject of thus finding
+the “solutions” for different original forms.
+
+<p>
+<hr><h3>Exercises XIX</h3>
+
+<p>
+<p>(1) Find $\int \sqrt {a^2 - x^2}\, dx$.
+<p>(2) Find $\int x \log_\epsilon x\, dx$.
+<p>(3) Find $\int x^a \log_\epsilon x\, dx$.
+<p>(4) Find $\int \epsilon^x \cos \epsilon^x\, dx$.
+<p>(5) Find $\int \dfrac{1}{x} \cos (\log_\epsilon x)\, dx$.
+<p>(6) Find $\int x^2 \epsilon^x\, dx$.
+<p>(7) Find $\int \dfrac{(\log_\epsilon x)^a}{x}\, dx$.
+<p>(8) Find $\int \dfrac{dx}{x \log_\epsilon x}$.
+<p>(9) Find $\int \dfrac{5x+1}{x^2 +x-2}\, dx$.
+<p>(10) Find $\int \dfrac{(x^2 -3)\, dx}{x^3 - 7x+6}$.
+<p>(11) Find $\int \dfrac{b\, dx}{x^2 -a^2}$.
+<p>(12) Find $\int \dfrac{4x\, dx}{x^4 -1}$.
+<p>(13) Find $\int \dfrac{dx}{1-x^4}$.
+<p>(14) Find $\int \dfrac{dx}{x \sqrt {a-bx^2}}$.
+
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(1)  $\dfrac{x\sqrt{a^2 - x^2}}{2} + \dfrac{a^2}{2} \sin^{-1} \dfrac{x}{a} + C$.
+
+<p>(2)  $\dfrac{x^2}{2}(\log_\epsilon x - \tfrac{1}{2}) + C$.
+
+
+<p>(3)  $\dfrac{x^{a+1}}{a + 1} \left(\log_\epsilon x - \dfrac{1}{a + 1}\right) + C$.
+
+<p>(4)  $\sin \epsilon^x + C$.
+
+
+<p>(5)  $\sin(\log_\epsilon x) + C$.
+
+<p>(6)  $\epsilon^x (x^2 - 2x + 2) + C$.
+
+
+<p>(7)  $\dfrac{1}{a + 1} (\log_\epsilon x)^{a+1} + C$.
+
+
+<p>(8)  $\log_\epsilon(\log_\epsilon x) + C$.
+
+
+<p>(9)  $2\log_\epsilon(x - 1) + 3\log_\epsilon(x + 2) + C$.
+
+<p>(10)  $\frac{1}{2} \log_\epsilon(x - 1) + \frac{1}{5} \log_\epsilon(x - 2) + \frac{3}{10} \log_\epsilon(x + 3) + C$.
+
+
+<p>(11)  $\dfrac{b}{2a} \log_\epsilon \dfrac{x - a}{x + a} + C$.
+
+<p>(12)  $\log_\epsilon \dfrac{x^2 - 1}{x^2 + 1} + C$.
+
+
+<p>(13)  $\frac{1}{4} \log_\epsilon \dfrac{1 + x}{1 - x} + \frac{1}{2} \arctan x + C$.
+
+<p>(14)  $\dfrac{1}{\sqrt{a}} \log_\epsilon \dfrac{\sqrt{a} - \sqrt{a - bx^2}}{x\sqrt{a}}$. (Let $\dfrac{1}{x} = v$; then, in the result,
+let $\sqrt{v^2 - \dfrac{b}{a}} = v - u$.)
+<br>
+<hr>
+<a href="21.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

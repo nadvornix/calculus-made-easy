@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Introducing a Useful Dodge | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 9}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Introducing a Useful Dodge</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Sometimes one is stumped by finding that the expression
+to be differentiated is too complicated to
+tackle directly.
+
+<p>Thus, the equation<a name="dodge"/>
+\[
+y = (x^2+a^2)^{\frac{3}{2}}
+\]
+is awkward to a beginner.
+
+<p>Now the dodge to turn the difficulty is this: Write
+some symbol, such as $u$, for the expression $x^2 + a^2$;
+then the equation becomes
+\[
+y = u^{\frac{3}{2}},
+\]
+which you can easily manage; for
+\[
+\frac{dy}{du} = \frac{3}{2} u^{\frac{1}{2}}.
+\]
+Then tackle the expression
+\[
+u = x^2 + a^2,
+\]
+and differentiate it with respect to $x$,
+\[
+\frac{du}{dx} = 2x.
+\]
+
+Then all that remains is plain sailing;
+\begin{align*}
+ \text{for}\;
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx}; \\
+ \text{that is,}\;
+\frac{dy}{dx}
+  &= \frac{3}{2} u^{\frac{1}{2}} × 2x \\
+  &= \tfrac{3}{2} (x^2 + a^2)^{\frac{1}{2}} × 2x \\
+  &= 3x(x^2 + a^2)^{\frac{1}{2}};
+\end{align*}
+and so the trick is done.
+
+<p>By and by, when you have learned how to deal
+with sines, and cosines, and exponentials, you will
+find this dodge of increasing usefulness.
+
+<p><p><hr>
+
+<p><p><p><em>Examples</em>
+Let us practise this dodge on a few examples.
+
+<p><a name="ExNo1"/>
+(1) Differentiate $y = \sqrt{a+x}$.
+
+<p>Let $a+x = u$.
+\begin{align*}
+\frac{du}{dx} &= 1;\quad y=u^{\frac{1}{2}};\quad
+  \frac{dy}{du} = \tfrac{1}{2} u^{-\frac{1}{2}}
+                = \tfrac{1}{2} (a+x)^{-\frac{1}{2}}.\\
+
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx} = \frac{1}{2\sqrt{a+x}}.
+\end{align*}
+
+<p>(2) Differentiate  $y = \dfrac{1}{\sqrt{a+x^2}}$.
+
+<p>Let $a + x^2 = u$.
+\begin{align*}
+\frac{du}{dx} &= 2x;\quad y=u^{-\frac{1}{2}};\quad
+  \frac{dy}{du} = -\tfrac{1}{2}u^{-\frac{3}{2}}.\\
+
+\frac{dy}{dx} &= \frac{dy}{du}×\frac{du}{dx} = - \frac{x}{\sqrt{(a+x^2)^3}}.
+\end{align*}
+
+
+<p>(3) Differentiate $y = \left(m - nx^{\frac{2}{3}} + \dfrac{p}{x^{\frac{4}{3}}}\right)^a$.
+
+<p>Let $m - nx^{\frac{2}{3}} + px^{-\frac{4}{3}} = u$.
+\begin{gather*}
+\frac{du}{dx} = -\tfrac{2}{3} nx^{-\frac{1}{3}} - \tfrac{4}{3} px^{-\frac{7}{3}};\\
+
+y = u^a;\quad \frac{dy}{du} = a u^{a-1}. \\
+
+\frac{dy}{dx} = \frac{dy}{du}×\frac{du}{dx}
+  = -a\left(m -nx^{\frac{2}{3}} + \frac{p}{x^{\frac{4}{3}}}\right)^{a-1}
+     (\tfrac{2}{3} nx^{-\frac{1}{3}} + \tfrac{4}{3} px^{-\frac{7}{3}}).
+\end{gather*}
+
+<p>(4) Differentiate $y=\dfrac{1}{\sqrt{x^3 - a^2}}$.
+
+<p>Let $u = x^3 - a^2$.
+\begin{align*}
+\frac{du}{dx} &= 3x^2;\quad y = u^{-\frac{1}{2}};\quad
+  \frac{dy}{du}=-\frac{1}{2}(x^3 - a^2)^{-\frac{3}{2}}. \\
+\frac{dy}{dx} &= \frac{dy}{du} × \frac{du}{dx} = -\frac{3x^2}{2\sqrt{(x^3 - a^2)^3}}.
+\end{align*}
+
+<p><a name="examples4"/>
+(5) Differentiate $y=\sqrt{\dfrac{1-x}{1+x}}$.
+
+<p>Write this as $y=\dfrac{(1-x)^{\frac{1}{2}}}{(1+x)^{\frac{1}{2}}}$.
+\[
+\frac{dy}{dx}
+  = \frac{(1+x)^{\frac{1}{2}}\, \dfrac{d(1-x)^{\frac{1}{2}}}{dx}
+        - (1-x)^{\frac{1}{2}}\, \dfrac{d(1+x)^{\frac{1}{2}}}{dx}}{1+x}.
+\]
+
+<p>(We may also write $y = (1-x)^{\frac{1}{2}} (1+x)^{-\frac{1}{2}}$ and differentiate
+as a product.)
+
+
+<p>Proceeding as in example (1) above, we get
+\[
+\frac{d(1-x)^{\frac{1}{2}}}{dx} = -\frac{1}{2\sqrt{1-x}};
+\quad\text{and}\quad
+\frac{d(1+x)^{\frac{1}{2}}}{dx} = \frac{1}{2\sqrt{1+x}}.
+\]
+
+<p>Hence
+\begin{align*}
+\frac{dy}{dx}
+  &= - \frac{(1 + x)^{\frac{1}{2}}}{2(1 + x)\sqrt{1-x}}
+     - \frac{(1 - x)^{\frac{1}{2}}}{2(1 + x)\sqrt{1+x}} \\
+  &= - \frac{1}{2\sqrt{1+x}\sqrt{1-x}} - \frac{\sqrt{1-x}}{2 \sqrt{(1+x)^3}};\\
+ or
+\frac{dy}{dx}
+  &= - \frac{1}{(1+x)\sqrt{1-x^2}}.
+\end{align*}
+
+<p>(6) Differentiate $y = \sqrt{\dfrac{x^3}{1+x^2}}$.
+
+<p>We may write this
+\begin{gather*}
+y = x^{\frac{3}{2}}(1+x^2)^{-\frac{1}{2}}; \\
+\frac{dy}{dx}
+  = \tfrac{3}{2} x^{\frac{1}{2}}(1 + x^2)^{-\frac{1}{2}}
+  + x^{\frac{3}{2}} × \frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx}.
+\end{gather*}
+
+<p>Differentiating $(1+x^2)^{-\frac{1}{2}}$, as shown in example (2)
+above, we get
+\[
+\frac{d\bigl[(1+x^2)^{-\frac{1}{2}}\bigr]}{dx} = - \frac{x}{\sqrt{(1+x^2)^3}};
+\]
+so that
+\[
+\frac{dy}{dx}
+  = \frac{3\sqrt{x}}{2\sqrt{1+x^2}} - \frac{\sqrt{x^5}}{\sqrt{(1+x^2)^3}}
+  = \frac{\sqrt{x}(3+x^2)}{2\sqrt{(1+x^2)^3}}.
+\]
+
+
+<p>(7) Differentiate $y=(x+\sqrt{x^2+x+a})^3$.
+
+<p>Let $x+\sqrt{x^2+x+a}=u$.
+\begin{gather*}
+\frac{du}{dx} = 1 + \frac{d\bigl[(x^2+x+a)^{\frac{1}{2}}\bigr]}{dx}. \\
+y = u^3;\quad\text{and}\quad \frac{dy}{du} = 3u^2= 3\left(x+\sqrt{x^2+x+a}\right)^2.
+\end{gather*}
+
+<p>Now let $(x^2+x+a)^{\frac{1}{2}}=v$ and $(x^2+x+a) = w$.
+\begin{align*}
+\frac{dw}{dx}
+  &= 2x+1;\quad v = w^{\frac{1}{2}};\quad \frac{dv}{dw} = \tfrac{1}{2}w^{-\frac{1}{2}}. \\
+\frac{dv}{dx}
+  &= \frac{dv}{dw} × \frac{dw}{dx} = \tfrac{1}{2}(x^2+x+a)^{-\frac{1}{2}}(2x+1). \\
+   Hence
+\frac{du}{dx}
+  &= 1 + \frac{2x+1}{2\sqrt{x^2+x+a}}, \\
+\frac{dy}{dx}
+  &= \frac{dy}{du} × \frac{du}{dx}\\
+  &= 3\left(x+\sqrt{x^2+x+a}\right)^2
+      \left(1 +\frac{2x+1}{2\sqrt{x^2+x+a}}\right).
+\end{align*}
+
+<p>(8) Differentiate $y=\sqrt{\dfrac{a^2+x^2}{a^2-x^2}} \sqrt[3]{\dfrac{a^2-x^2}{a^2+x^2}}$.
+
+<p>We get
+\begin{align*}
+y &= \frac{(a^2+x^2)^{\frac{1}{2}} (a^2-x^2)^{\frac{1}{3}}}
+          {(a^2-x^2)^{\frac{1}{2}} (a^2+x^2)^{\frac{1}{3}}}
+  = (a^2+x^2)^{\frac{1}{6}} (a^2-x^2)^{-\frac{1}{6}}. \\
+\frac{dy}{dx}
+  &= (a^2+x^2)^{\frac{1}{6}} \frac{d\bigl[(a^2-x^2)^{-\frac{1}{6}}\bigr]}{dx}
+   + \frac{d\bigl[(a^2+x^2)^{\frac{1}{6}}\bigr]}{(a^2-x^2)^{\frac{1}{6}}\, dx}.
+\end{align*}
+
+<p>Let $u = (a^2-x^2)^{-\frac{1}{6}}$ and $v = (a^2 - x^2)$.
+\begin{align*}
+u &= v^{-\frac{1}{6}};\quad
+  \frac{du}{dv} = -\frac{1}{6}v^{-\frac{7}{6}};\quad
+  \frac{dv}{dx} = -2x. \\
+
+\frac{du}{dx} &= \frac{du}{dv} × \frac{dv}{dx} = \frac{1}{3}x(a^2-x^2)^{-\frac{7}{6}}.
+\end{align*}
+
+<p>Let $w = (a^2 + x^2)^{\frac{1}{6}}$ and $z = (a^2 + x^2)$.
+\begin{align*}
+w &= z^{\frac{1}{6}};\quad
+  \frac{dw}{dz} = \frac{1}{6}z^{-\frac{5}{6}};\quad
+  \frac{dz}{dx} = 2x. \\
+
+\frac{dw}{dx} &= \frac{dw}{dz} × \frac{dz}{dx} = \frac{1}{3} x(a^2 + x^2)^{-\frac{5}{6}}.
+\end{align*}
+
+<p>Hence
+\begin{align*}
+\frac{dy}{dx}
+  &= (a^2+x^2)^{\frac{1}{6}} \frac{x}{3(a^2-x^2)^{\frac{7}{6}}}
+   + \frac{x}{3(a^2-x^2)^{\frac{1}{6}} (a^2+x^2)^{\frac{5}{6}}}; \\
+
+ or
+\frac{dy}{dx}
+  &= \frac{x}{3}
+     \left[\sqrt[6]{\frac{a^2+x^2}{(a^2-x^2)^7}}
+           + \frac{1}{\sqrt[6]{(a^2-x^2)(a^2+x^2)^5]}} \right].
+\end{align*}
+
+<p>(9) Differentiate $y^n$ with respect to $y^5$.
+\[
+\frac{d(y^n)}{d(y^5)} = \frac{ny^{n-1}}{5y^{5-1}} = \frac{n}{5} y^{n-5}.
+\]
+
+<p>
+(10)<a name="Example10"/> Find the first and second differential coefficients
+of $y = \dfrac{x}{b} \sqrt{(a-x)x}$.
+\[
+\frac{dy}{dx}
+  = \frac{x}{b}\,
+    \frac{d\bigl\{\bigl[(a-x)x\bigr]^{\frac{1}{2}}\bigr\}}{dx}
+  + \frac{\sqrt{(a-x)x}}{b}.
+\]
+
+<p>Let $\bigl[(a-x)x\bigr]^{\frac{1}{2}} = u$ and let $(a-x)x = w$; then $u = w^{\frac{1}{2}}$.
+\[
+\frac{du}{dw}
+  = \frac{1}{2} w^{-\frac{1}{2}}
+  = \frac{1}{2w^{\frac{1}{2}}} = \frac{1}{2\sqrt{(a-x)x}}.
+\]
+
+\begin{align*}
+&\frac{dw}{dx} = a-2x.\\
+&\frac{du}{dw} × \frac{dw}{dx} = \frac{du}{dx} = \frac{a-2x}{2\sqrt{(a-x)x}}.
+\end{align*}
+
+<p>Hence
+\[
+\frac{dy}{dx}
+  = \frac{x(a-2x)}{2b\sqrt{(a-x)x}} + \frac{\sqrt{(a-x)x}}{b}
+  = \frac{x(3a-4x)}{2b\sqrt{(a-x)x}}.
+\]
+
+<p>Now
+\begin{align*}
+\frac{d^2y}{dx^2}
+  &= \frac{2b \sqrt{(a-x)x}\, (3a-8x)
+           - \dfrac{(3ax-4x^2)b(a-2x)}{\sqrt{(a-x)x}}}
+          {4b^2(a-x)x} \\
+  &= \frac{3a^2-12ax+8x^2}{4b(a-x)\sqrt{(a-x)x}}.
+\end{align*}
+
+<p>(We shall need these two last differential coefficients
+later on. See <a href="12.html#ex10">Chapter XII, Exercise 11</a>)
+
+<p>
+<a name="ex6"/>
+<hr><h3>Exercises VI</h3>
+
+<p>Differentiate the following:
+
+<p>
+<p>(1) $y = \sqrt{x^2 + 1}$.
+<p>(2) $y = \sqrt{x^2+a^2}$.
+<p>(3) $y = \dfrac{1}{\sqrt{a+x}}$.
+<p>(4) $y = \dfrac{a}{\sqrt{a-x^2}}$.
+<p>(5) $y = \dfrac{\sqrt{x^2-a^2}}{x^2}$.
+<p>(6) $y = \dfrac{\sqrt[3]{x^4+a}}{\sqrt[2]{x^3+a}}$.
+<p>(7) $y = \dfrac{a^2+x^2}{(a+x)^2}$.
+<p>(8) Differentiate $y^5$ with respect to $y^2$.
+<p>(9) Differentiate $y = \dfrac{\sqrt{1 - \theta^2}}{1 - \theta}$.
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(1)   $\dfrac{x}{\sqrt{ x^2 + 1}}$.
+<p>(2)   $\dfrac{x}{\sqrt{ x^2 + a^2}}$.
+<p>(3)   $- \dfrac{1}{2 \sqrt{(a + x)^3}}$.
+
+
+<p>(4)   $\dfrac{ax}{\sqrt{(a - x^2)^3}}$.
+<p>(5)   $\dfrac{2a^2 - x^2}{x^3 \sqrt{ x^2 - a^2}}$.
+
+
+<p>(6)   $ \dfrac{\frac{3}{2} x^2 \left[ \frac{8}{9} x \left( x^3 + a \right) - \left( x^4 + a \right) \right]}{(x^4 + a)^{\frac{2}{3}} (x^3 + a)^{\frac{3}{2}}}$
+<p>(7)   $\dfrac{2a \left(x - a \right)}{(x + a)^3}$.
+
+
+<p>(8)   $\frac{5}{2} y^3$.
+<p>(9)   $\dfrac{1}{(1 - \theta) \sqrt{1 - \theta^2}}$.
+
+<hr>
+
+<p>The process can be extended to three or more
+differential coefficients, so that $\dfrac{dy}{dx} = \dfrac{dy}{dz} × \dfrac{dz}{dv} × \dfrac{dv}{dx}$.
+
+<p>
+<p><em>Examples</em>
+(1) If $z = 3x^4$;&nbsp;&nbsp; $v = \dfrac{7}{z^2}$;&nbsp;&nbsp; $y =\sqrt{1+v}$, find $\dfrac{dv}{dx}$.
+
+<p>We have
+\begin{align*}
+\frac{dy}{dv} &= \frac{1}{2\sqrt{1+v}};\quad
+\frac{dv}{dz} = -\frac{14}{z^3};\quad
+\frac{dz}{dx} = 12x^3. \\
+
+\frac{dy}{dx} &= -\frac{168x^3}{(2\sqrt{1+v})z^3}
+               = -\frac{28}{3x^5\sqrt{9x^8+7}}.
+\end{align*}
+
+<p>(2) If $t = \dfrac{1}{5\sqrt{\theta}}$;&nbsp;&nbsp; $x = t^3 + \dfrac{t}{2}$;&nbsp;&nbsp; $v = \dfrac{7x^2}{\sqrt[3]{x-1}}$, find $\dfrac{dv}{d\theta}$.
+
+\[
+\frac{dv}{dx} = \frac{7x(5x-6)}{3\sqrt[3]{(x-1)^4}};\quad
+\frac{dx}{dt} = 3t^2 + \tfrac{1}{2};\quad
+\frac{dt}{d\theta} = -\frac{1}{10\sqrt{\theta^3}}. \\
+ Hence \;
+\frac{dv}{d\theta}
+  = -\frac{7x(5x-6)(3t^2+\frac{1}{2})}
+          {30\sqrt[3]{(x-1)^4} \sqrt{\theta^3}},
+\]
+an expression in which $x$ must be replaced by its
+value, and $t$ by its value in terms of $\theta$.
+
+<p>(3) If $\theta = \dfrac{3a^2x}{\sqrt{x^3}}$;&nbsp;&nbsp; $\omega = \dfrac{\sqrt{1-\theta^2}}{1+\theta}$;&nbsp;&nbsp; and $\phi = \sqrt{3} - \dfrac{1}{\omega\sqrt{2}}$,
+find $\dfrac{d\phi}{dx}$.
+
+
+<p>We get
+\begin{gather*}
+\theta = 3a^2x^{-\frac{1}{2}};\quad
+\omega = \sqrt{\frac{1-\theta}{1+\theta}};\quad \text{and}\quad
+\phi = \sqrt{3} - \frac{1}{\sqrt{2}} \omega^{-1}. \\
+\frac{d\theta}{dx} = -\frac{3a^2}{2\sqrt{x^3}};\quad
+\frac{d\omega}{d\theta} = -\frac{1}{(1+\theta)\sqrt{1-\theta^2}}
+\end{gather*}
+(see example 5, <a href="9.html#examples4">here</a>); and
+\[
+\frac{d\phi}{d\omega} = \frac{1}{\sqrt{2}\omega^2}.
+\]
+
+<p>So that $\dfrac{d\theta}{dx} = \dfrac{1}{\sqrt{2} × \omega^2}
+  × \dfrac{1}{(1+\theta) \sqrt{1-\theta^2}}
+  × \dfrac{3a^2}{2\sqrt{x^3}}$.
+
+<p>Replace now first $\omega$, then $\theta$ by its value.
+
+<p>
+<hr><h3>Exercises VII</h3>
+You can now successfully try the following.
+
+<p>(1) If $u = \frac{1}{2}x^3$;&nbsp;&nbsp;$v = 3(u+u^2)$;&nbsp;&nbsp;and $w = \dfrac{1}{v^2}$, find $\dfrac{dw}{dx}$.
+
+<p>(2) If $y = 3x^2 + \sqrt{2}$;&nbsp;&nbsp;$z = \sqrt{1+y}$;&nbsp;&nbsp;and $v = \dfrac{1}{\sqrt{3}+4z}$,
+find $\dfrac{dv}{dx}$.
+
+<p>(3) If $y = \dfrac{x^3}{\sqrt{3}}$;&nbsp;&nbsp;$z = (1+y)^2$;&nbsp;&nbsp;and $u = \dfrac{1}{\sqrt{1+z}}$, find $\dfrac{du}{dx}$.
+
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(1)   $\dfrac{dw}{dx} = \dfrac{3x^2 \left( 3 + 3x^3 \right)} {27 \left(\frac{1}{2} x^3 + \frac{1}{4} x^6 \right)^3}$.
+
+<p>(2)   $\dfrac{dv}{dx} = - \dfrac{12x}{\sqrt{1 + \sqrt{2} + 3x^2} \left(\sqrt{3} + 4 \sqrt{1 + \sqrt{2} + 3x^2}\right)^2}$.
+
+<p>(3)   $\dfrac{du}{dx} = - \dfrac{x^2 \left(\sqrt{3} + x^3 \right)} {\sqrt{ \left[ 1 + \left( 1 + \dfrac{x^3}{\sqrt{3}} \right) ^2 \right]^3}} $
+<p>
+<br>
+<hr>
+<a href="10.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

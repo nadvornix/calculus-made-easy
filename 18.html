@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Integrating as the Reverse of Differentiating | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 18}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Integrating as the Reverse of Differentiating</h1>
+<p class="a rotatedFloralHeartBullet">
+<p>Differentiating is the process by which when $y$ is
+given us (as a function of $x$), we can find $\dfrac{dy}{dx}$.
+
+<p><a name="revdif"/>
+Like every other mathematical operation, the
+process of differentiation may be reversed; thus, if
+differentiating $y = x^4$ gives us $\dfrac{dy}{dx} = 4x^3$; if one begins
+with $\dfrac{dy}{dx} = 4x^3$ one would say that reversing the process
+would yield $y = x^4$.  But here comes in a curious
+point. We should get $\dfrac{dy}{dx} = 4x^3$ if we had begun with
+<em>any</em> of the following: $x^4$, or $x^4 + a$, or $x^4 + c$, or $x^4$
+with <em>any</em> added constant. So it is clear that in
+working backwards from $\dfrac{dy}{dx}$ to $y$, one must make
+provision for the possibility of there being an added
+constant, the value of which will be undetermined
+
+until ascertained in some other way. So, if differentiating
+$x^n$ yields $nx^{n-1}$, going backwards from
+$\dfrac{dy}{dx} = nx^{n-1}$ will give us $y = x^n + C$; where $C$ stands
+for the yet undetermined possible constant.
+
+<p>Clearly, in dealing with powers of $x$, the rule for
+working backwards will be: Increase the power by $1$,
+then divide by that increased power, and add the
+undetermined constant.
+
+<p>So, in the case where
+\[
+\frac{dy}{dx} = x^n,
+\]
+working backwards, we get
+\[
+y = \frac{1}{n + 1} x^{n+1} + C.
+\]
+
+<p>If differentiating the equation $y = ax^n$ gives us
+\[
+\frac{dy}{dx} = anx^{n-1},
+\]
+it is a matter of common sense that beginning with
+\[
+\frac{dy}{dx} = anx^{n-1},
+\]
+and reversing the process, will give us
+\[
+y = ax^n.
+\]
+So, when we are dealing with a multiplying constant,
+we must simply put the constant as a multiplier of
+the result of the integration.
+
+
+<p>Thus, if $\dfrac{dy}{dx} = 4x^2$, the reverse process gives us
+$y = \frac{4}{3}x^3$.
+
+<p>But this is incomplete. For we must remember
+that if we had started with
+\[
+y = ax^n + C,
+\]
+where $C$ is any constant quantity whatever, we should
+equally have found
+\[
+\frac{dy}{dx} = anx^{n-1}.
+\]
+
+<p>So, therefore, when we reverse the process we must
+always remember to add on this undetermined constant,
+even if we do not yet know what its value
+will be.
+
+<p>This process, the reverse of differentiating, is called
+<em>integrating</em>; for it consists in finding the value of
+the whole quantity $y$ when you are given only an
+expression for $dy$ or for $\dfrac{dy}{dx}$. Hitherto we have as
+much as possible kept $dy$ and $dx$ together as a differential
+coefficient: henceforth we shall more often
+have to separate them.
+
+<p>If we begin with a simple case,
+\[
+\frac{dy}{dx} = x^2.
+\]
+
+<p>We may write this, if we like, as
+\[
+dy = x^2\, dx.
+\]
+
+<p>Now this is a  “differential equation”  which informs
+us that an element of $y$ is equal to the corresponding
+element of $x$ multiplied by $x^2$. Now, what we want
+
+is the integral; therefore, write down with the proper
+symbol the instructions to integrate both sides, thus:
+\[
+\int dy = \int x^2\, dx.
+\]
+
+<p>[Note as to reading integrals: the above would be
+read thus:
+“<em>Integral dee-wy </em> equals <em>integral eks-squared dee-eks</em>.”]
+
+
+<p>We haven't yet integrated: we have only written
+down instructions to integrate–if we can. Let us
+try. Plenty of other fools can do it–why not we
+also? The left-hand side is simplicity itself. The
+sum of all the bits of $y$ is the same thing as $y$ itself.
+So we may at once put:
+\[
+y = \int x^2\, dx.
+\]
+
+<p>But when we come to the right-hand side of the
+equation we must remember that what we have got
+to sum up together is not all the $dx$'s, but all such
+terms as $x^2\, dx$; and this will <em>not</em> be the same as
+$x^2 \int dx$, because $x^2$ is not a constant. For some of the
+$dx$'s will be multiplied by big values of $x^2$, and some
+will be multiplied by small values of $x^2$, according to
+what $x$ happens to be. So we must bethink ourselves
+as to what we know about this process of integration
+being the reverse of differentiation. Now, our rule
+for this reversed process–see <a href="18.html#revdif">here</a> <em>ante</em> –when
+dealing with $x^n$ is “increase the power by one, and<a name="diffrule"/>
+divide by the same number as this increased power.”
+
+That is to say, $x^2\, dx$ will be changed *
+to $\frac{1}{3} x^3$. Put
+this into the equation; but don't forget to add the
+“constant of integration” $C$ at the end. So we get:
+\[
+y = \tfrac{1}{3} x^3 + C.
+\]
+
+<p>You have actually performed the integration. How
+easy!
+<p><note>*You may ask, what has become of the little $dx$ at the end?
+  Well, remember that it was really part of the differential coefficient,
+  and when changed over to the right-hand side, as in the $x^2\, dx$,
+  serves as a reminder that $x$ is the independent variable with respect
+  to which the operation is to be effected; and, as the result of the
+  product being totalled up, the power of $x$ has increased by <em>one</em>.
+  You will soon become familiar with all this.</note>
+<p>Let us try another simple case.
+
+<p>\begin{align*}
+   Let
+\dfrac{dy}{dx} &= ax^{12},
+\end{align*}
+where $a$ is any constant multiplier. Well, we found
+when differentiating (see <a href="5.html#differ">here</a>) that any constant
+factor in the value of $y$ reappeared unchanged in the
+value of $\dfrac{dy}{dx}$. In the reversed process of integrating,
+it will therefore also reappear in the value of $y$. So
+we may go to work as before, thus
+\begin{align*}
+dy &= ax^{12} · dx,\\
+\int dy &= \int ax^{12} · dx,\\
+\int dy &= a \int x^{12}\, dx,\\
+y &= a × \tfrac{1}{13} x^{13} + C.
+\end{align*}
+
+<p>So that is done. How easy!
+
+
+<p>We begin to realize now that integrating is a
+process of <em>finding our way back</em>, as compared with
+differentiating. If ever, during differentiating, we
+have found any particular expression–in this example
+$ax^{12}$–we can find our way back to the $y$ from which
+it was derived. The contrast between the two
+processes may be illustrated by the following remark
+due to a well-known teacher. If a stranger were set
+down in Trafalgar Square, and told to find his way to
+Euston Station, he might find the task hopeless. But
+if he had previously been personally conducted from
+Euston Station to Trafalgar Square, it would be
+comparatively easy to him to find his way back to
+Euston Station.
+
+<p><h2>Integration of the Sum or Difference of two
+Functions.</h2>
+
+<p>\begin{align*}
+   \mbox{Let }
+\frac{dy}{dx} &= x^2 + x^3, \\
+ \mbox{then }
+dy &= x^2\, dx + x^3\, dx.
+\end{align*}
+
+<p>There is no reason why we should not integrate
+each term separately: for, as may be seen on <a href="6.html#sumdiffer">here</a>,
+we found that when we differentiated the sum of two
+separate functions, the differential coefficient was
+simply the sum of the two separate differentiations.
+So, when we work backwards, integrating, the integration
+will be simply the sum of the two separate
+integrations.
+
+
+<p>Our instructions will then be:
+\begin{align*}
+\int dy
+  &= \int (x^2 + x^3)\, dx \\
+  &= \int x^2\, dx + \int x^3\, dx   \\
+y &= \tfrac{1}{3} x^3 + \tfrac{1}{4} x^4 + C.
+\end{align*}
+
+<p>If either of the terms had been a negative quantity,
+the corresponding term in the integral would have
+also been negative. So that differences are as readily
+dealt with as sums.
+
+<p><h2>How to deal with Constant Terms.</h2>
+
+<p>Suppose there is in the expression to be integrated
+a constant term–such as this:
+\[
+\frac{dy}{dx} = x^n + b.
+\]
+
+<p>This is laughably easy. For you have only to
+remember that when you differentiated the expression
+$y = ax$, the result was $\dfrac{dy}{dx} = a$. Hence, when you work
+the other way and integrate, the constant reappears
+multiplied by $x$. So we get
+\begin{align*}
+dy &= x^n\, dx + b · dx,  \\
+\int dy &= \int x^n\, dx + \int b\, dx, \\
+y &= \frac{1}{n+1} x^{n+1} + bx + C.
+\end{align*}
+
+<p>Here are a lot of examples on which to try your
+newly acquired powers.
+
+<p><hr>
+
+
+<p>
+<p><em>Examples</em>
+<p>(1) Given $\dfrac{dy}{dx} = 24x^{11}$. Find $y$.<p> <em>Ans</em> . $y = 2x^{12} + C$.
+
+<p>(2) Find $\int (a + b)(x + 1)\, dx$.<p> It is $(a + b) \int (x + 1)\, dx$
+or  $(a + b) \left[\int x\, dx + \int dx\right]$ or $(a + b) \left(\dfrac{x^2}{2} + x\right) + C$.
+
+<p>(3) Given $\dfrac{du}{dt} = gt^{\frac{1}{2}}$. Find $u$.<p> <em>Ans</em> . $u = \frac{2}{3} gt^{\frac{3}{2}} + C$.
+
+<p>(4) $\dfrac{dy}{dx} = x^3 - x^2 + x$. Find $y$.
+\begin{align*}
+dy &= (x^3 - x^2 + x)\, dx\quad\text{or} \\
+dy &= x^3\, dx - x^2\, dx + x\, dx;\quad
+y = \int x^3\, dx - \int x^2\, dx + \int x\, dx;
+\end{align*}
+ and
+\begin{align*}
+
+y &= \tfrac{1}{4} x^4 - \tfrac{1}{3} x^3 + \tfrac{1}{2} x^2 + C.
+\end{align*}
+
+<p>(5) Integrate $9.75x^{2.25}\, dx$.<p> <em>Ans</em> . $y = 3x^{3.25} + C$.
+
+<p><hr>
+
+<p>All these are easy enough. Let us try another case.
+
+
+<p>\begin{align*}
+ Let
+\dfrac{dy}{dx} &= ax^{-1}.
+\end{align*}
+
+<p>Proceeding as before, we will write
+\[
+dy = a x^{-1} · dx,\quad \int dy = a \int x^{-1}\, dx.
+\]
+
+<p>Well, but what is the integral of $x^{-1}\, dx$?
+
+<p>If you look back amongst the results of differentiating
+$x^2$ and $x^3$ and $x^n$, etc., you will find we never
+got $x^{-1}$ from any one of them as the value of $\dfrac{dy}{dx}$.
+We got $3x^2$ from $x^3$; we got $2x$ from $x^2$; we got $1$
+from $x^1$ (that is, from $x$ itself); but we did not get
+$x^{-1}$ from $x^0$, for two very good reasons. <em>First</em>, $x^0$ is
+simply $= 1$, and is a constant, and could not have
+
+a differential coefficient. <em>Secondly</em>, even if it could
+be differentiated, its differential coefficient (got by
+slavishly following the usual rule) would be $0 × x^{-1}$,
+and that multiplication by zero gives it zero value!
+Therefore when we now come to try to integrate
+$x^{-1}\, dx$, we see that it does not come in anywhere
+in the powers of $x$ that are given by the rule:
+\[
+\int x^n\, dx = \dfrac{1}{n+1} x^{n+1}.
+\]
+It is an exceptional case.
+
+<p>Well; but try again. Look through all the various
+differentials obtained from various functions of $x$, and
+try to find amongst them $x^{-1}$. A sufficient search
+will show that we actually did get $\dfrac{dy}{dx} = x^{-1}$ as the
+result of differentiating<a name="intex1"/> the function $y = \log_\epsilon x$ (see
+<a href="14.html#differlog">here</a>).
+
+<p>Then, of course, since we know that differentiating
+$\log_\epsilon x$ gives us $x^{-1}$, we know that, by reversing the
+process, integrating $dy = x^{-1}\, dx$ will give us $y = \log_\epsilon x$.
+But we must not forget the constant factor $a$ that
+was given, nor must we omit to add the undetermined
+constant of integration. This then gives us as the
+solution to the present problem,
+\[
+y = a \log_\epsilon x + C.
+\]
+
+<p><em>Note</em>–Here note this very remarkable fact, that we
+could not have integrated in the above case if we had
+not happened to know the corresponding differentiation.
+If no one had found out that differentiating
+$\log_\epsilon x$ gave $x^{-1}$, we should have been utterly stuck by
+
+the problem how to integrate $x^{-1}\, dx$. Indeed it should
+be frankly admitted that this is one of the curious
+features of the integral calculus:–that you can't
+integrate anything before the reverse process of differentiating
+something else has yielded that expression
+which you want to integrate. No one, even to-day,
+is able to find the general integral of the expression,
+\[
+\frac{dy}{dx} = a^{-x^2},
+\]
+because $a^{-x^2}$ has never yet been found to result from
+differentiating anything else.
+
+<p>
+<em>Another simple case.</em><p>
+Find $\int (x + 1)(x + 2)\, dx$.
+
+<p>On looking at the function to be integrated, you
+remark that it is the product of two different functions
+of $x$. You could, you think, integrate $(x + 1)\, dx$ by
+itself, or $(x + 2)\, dx$ by itself. Of course you could.
+But what to do with a product? None of the differentiations
+you have learned have yielded you for the
+differential coefficient a product like this. Failing
+such, the simplest thing is to multiply up the two
+functions, and then integrate. This gives us
+\[
+\int (x^2 + 3x + 2)\, dx.
+\]
+And this is the same as
+\[
+\int x^2\, dx + \int 3x\, dx + \int 2\, dx.
+\]
+And performing the integrations, we get
+\[
+\tfrac{1}{3} x^3 + \tfrac{3}{2} x^2 + 2x + C.
+\]
+
+
+<p>
+  <h2>Some other Integrals</h2>
+
+
+<p>Now that we know that integration is the reverse
+of differentiation, we may at once look up the differential
+coefficients we already know, and see from
+what functions they were derived. This gives us the
+following integrals ready made:<a name="intex2"/><a name="differ3"/><a name="cosax"/>
+
+\begin{alignat*}{4}
+&x^{-1} &&\qquad &&
+  \int x^{-1}\, dx      &&= \log_\epsilon x + C. \\
+
+%\label{intex2}
+&\frac{1}{x+a} &&  &&
+  \int \frac{1}{x+a}\, dx &&= \log_\epsilon (x+a) + C. \\
+
+&\epsilon^x &&  &&
+  \int \epsilon^x\, dx    &&= \epsilon ^x + C. \\
+
+&\epsilon^{-x} &&&&
+  \int \epsilon^{-x}\, dx &&= -\epsilon^{-x} + C \\
+
+\end{alignat*}
+(for if $y = - \dfrac{1}{\epsilon^x}$, $\dfrac{dy}{dx} = -\dfrac{\epsilon^x × 0 - 1 × \epsilon^x}{\epsilon^{2x}} = \epsilon^{-x}$).
+\begin{alignat*}{4}
+
+
+&\sin x &&  &&
+  \int \sin x\, dx        &&= -\cos x + C. \\
+
+&\cos x && &&
+  \int \cos x\, dx        &&= \sin x + C. \\
+
+\end{alignat*}
+ Also we may deduce the following:
+\begin{alignat*}{4}
+
+&\log_\epsilon x; &&&&
+  \int\log_\epsilon x\, dx &&= x(\log_\epsilon x - 1) + C \\
+
+\end{alignat*}
+(for if $y = x \log_\epsilon x - x$, $\dfrac{dy}{dx} = \dfrac{x}{x} + \log_\epsilon x - 1 = \log_\epsilon x$).
+\begin{alignat*}{4}
+
+
+&\log_{10} x;   &&&&
+  \int\log_{10} x\, dx &&= 0.4343x (\log_\epsilon x - 1) + C. \\
+
+&a^x &&  &&
+  \int a^x\, dx        &&= \dfrac{a^x}{\log_\epsilon a} + C. \\
+
+% \label{cosax}
+&\cos ax; &&&& \int\cos ax\, dx     &&= \frac{1}{a} \sin ax + C \\
+\end{alignat*}
+(for if $y = \sin ax$, $\dfrac{dy}{dx} = a \cos ax$; hence to get $\cos ax$
+one must differentiate $y = \dfrac{1}{a} \sin ax$).
+\begin{alignat*}{4}
+
+
+
+&\sin ax; &&&& \int\sin ax\, dx     &&= -\frac{1}{a} \cos ax + C. \\
+\end{alignat*}
+
+<p>Try also $\cos^2\theta$; a little dodge will simplify matters:
+\[
+\cos 2\theta = \cos^2\theta - \sin^2\theta
+             = 2\cos^2 \theta - 1; \\
+\]
+ hence
+\[
+\cos^2\theta = \tfrac{1}{2}(\cos 2\theta + 1),
+\]
+ and
+\begin{align*}
+
+\int\cos^2 \theta\, d\theta
+  &= \tfrac{1}{2} \int (\cos 2\theta + 1)\, d\theta \\
+  &= \tfrac{1}{2} \int \cos 2 \theta\, d\theta + \tfrac{1}{2} \int d\theta. \\
+  &= \frac{\sin 2\theta}{4} + \frac{\theta}{2} + C.
+\end{align*}
+<p>(See also <a href="20.html#moreexamples">here</a>)
+<p>
+See also the <a href="table.html">Table of Standard Forms</a>.
+You should make such a table for yourself, putting
+in it only the general functions which you have
+successfully differentiated and integrated. See to it
+that it grows steadily!
+
+
+<p>
+  <h2>On Double and Triple Integrals.</h2>
+
+
+<p>In many cases it is necessary to integrate some
+expression for two or more variables contained in it;
+and in that case the sign of integration appears more
+than once. Thus,
+\[
+\iint f(x,y,)\, dx\, dy
+\]
+means that some function of the variables $x$ and $y$
+has to be integrated for each. It does not matter in
+which order they are done. Thus, take the function
+$x^2 + y^2$. Integrating it with respect to $x$ gives us:
+\[
+\int (x^2+y^2)\, dx = \tfrac{1}{3} x^3 + xy^2.
+\]
+
+<p>Now, integrate this with respect to $y$:
+\[
+\int (\tfrac{1}{3} x^3 + xy^2)\, dy = \tfrac{1}{3} x^3y + \tfrac{1}{3} xy^3,
+\]
+to which of course a constant is to be added. If we
+had reversed the order of the operations, the result
+would have been the same.
+
+<p>In dealing with areas of surfaces and of solids, we
+have often to integrate both for length and breadth,
+and thus have integrals of the form
+\[
+\iint u · dx\, dy,
+\]
+where $u$ is some property that depends, at each point,
+on $x$ and on $y$. This would then be called a <em>surface-integral</em>.
+It indicates that the value of all such
+
+elements as $u · dx · dy$ (that is to say, of the value of $u$
+over a little rectangle $dx$ long and $dy$ broad) has to be
+summed up over the whole length and whole breadth.
+
+<p>Similarly in the case of solids, where we deal with
+three dimensions. Consider any element of volume,
+the small cube whose dimensions are $dx$ $dy$ $dz$. If
+the figure of the solid be expressed by the function
+$f(x, y, z)$, then the whole solid will have the <em>volume-integral</em>,
+\[
+\text{volume} = \iiint f(x,y,z) · dx · dy · dz.
+\]
+Naturally, such integrations have to be taken between
+appropriate limits (See <a href="19.html#limits">here</a> for integration between limits.)
+in each dimension; and the
+integration cannot be performed unless one knows in
+what way the boundaries of the surface depend on
+$x$, $y$, and $z$. If the limits for $x$ are from $x_1$ to $x_2$,
+those for $y$ from $y_1$ to $y_2$, and those for $z$ from $z_1$
+to $z_2$, then clearly we have
+\[
+\text{volume} = \int_{z1}^{z2} \int_{y1}^{y2} \int_{x1}^{x2} f(x,y,z) · dx · dy · dz.
+\]
+
+<p>There are of course plenty of complicated and
+difficult cases; but, in general, it is quite easy to
+see the significance of the symbols where they are
+intended to indicate that a certain integration has to
+be performed over a given surface, or throughout a
+given solid space.
+
+
+<p>
+<hr><h3>Exercises XVII</h3>
+
+
+(1) Find  $\int y\, dx$ when  $y^2 = 4 ax$.
+
+<p>
+(2) Find  $\int \frac{3}{x^4}\, dx$.
+<p>(3) Find  $\int \frac{1}{a} x^3\, dx$.
+
+<p>
+(4) Find  $\int (x^2 + a)\, dx$.
+<p>(5) Integrate $5x^{-\frac{7}{2}}$.
+
+<p>
+(6) Find  $\int (4x^3 + 3x^2 + 2x + 1)\, dx$.
+
+<p>(7) If $\dfrac{dy}{dx} = \dfrac{ax}{2} + \dfrac{bx^2}{3} + \dfrac{cx^3}{4}$; find $y$.
+
+<p>
+(8) Find $\int \left(\frac{x^2 + a}{x + a}\right) dx$.
+<p>(9)  Find $\int (x + 3)^3\, dx$.
+
+<p>
+(10) Find $\int (x + 2)(x - a)\, dx$.
+
+<p>(11) Find $\int (\sqrt x + \sqrt[3] x) 3a^2\, dx$.
+
+<p>(12) Find $\int (\sin \theta - \tfrac{1}{2})\, \frac{d\theta}{3}$.
+
+<p>
+(13) Find  $\int \cos^2 a \theta\, d\theta$.
+<p>(14) Find  $\int \sin^2 \theta\, d\theta$.
+
+<p>
+(15) Find  $\int \sin^2 a \theta\, d\theta$.
+<p>(16) Find  $\int \epsilon^{3x}\, dx$.
+
+<p>
+(17) Find  $\int \dfrac{dx}{1 + x}$.
+<p>(18) Find  $\int \dfrac{dx}{1 - x}$.
+
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(1)  $\dfrac{4\sqrt{a} x^{\frac{3}{2}}}{3} + C$.
+
+<p>(2)  $-\dfrac{1}{x^3} + C$.
+
+<p>(3)  $\dfrac{x^4}{4a} + C$.
+
+
+<p>(4)  $\tfrac{1}{3} x^3 + ax + C$.
+
+<p>(5)  $-2x^{-\frac{5}{2}} + C$.
+
+
+<p>(6)  $x^4 + x^3 + x^2 + x + C$.
+
+<p>(7)  $\dfrac{ax^2}{4} + \dfrac{bx^3}{9} + \dfrac{cx^4}{16} + C$.
+
+
+<p>(8)   $\dfrac{x^2 + a}{x + a} = x - a + \dfrac{a^2 + a}{x + a}$ by division. Therefore the answer
+is $\dfrac{x^2}{2} - ax + (a^2 + a)\log_\epsilon (x + a) + C$.
+  (See pages <a href="18.html#intex1">here</a> and <a href="18.html#intex2">here</a>.)
+
+
+<p>(9)  $\dfrac{x^4}{4} + 3x^3 + \dfrac{27}{2} x^2 + 27x + C$.
+
+<p>(10)  $\dfrac{x^3}{3} + \dfrac{2 - a}{2} x^2 - 2ax + C$.
+
+
+<p>(11)  $a^2(2x^{\frac{3}{2}} + \tfrac{9}{4} x^{\frac{4}{3}}) + C$.
+
+<p>(12)  $-\tfrac{1}{3} \cos\theta - \tfrac{1}{6} \theta + C$.
+
+
+<p>(13)  $\dfrac{\theta}{2} + \dfrac{\sin 2a\theta}{4a} + C$.
+
+<p>(14)  $\dfrac{\theta}{2} - \dfrac{\sin 2\theta}{4} + C$.
+
+
+<p>(15)  $\dfrac{\theta}{2} - \dfrac{\sin 2a\theta}{4a} + C$.
+
+<p>(16)  $\tfrac{1}{3} \epsilon^{3x}$. % [F1: +C?]
+
+
+<p>(17)  $\log(1 + x) + C$.
+
+<p>(18)  $-\log_\epsilon (1 - x) + C$.
+<br>
+<hr>
+<a href="19.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

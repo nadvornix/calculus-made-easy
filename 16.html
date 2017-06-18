@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Partial Differentiation | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 16}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Partial Differentiation</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>We sometimes come across quantities that are functions
+of more than one independent variable. Thus,
+we may find a case where $y$ depends on two other
+variable quantities, one of which we will call $u$ and
+the other $v$. In symbols<a name="partialdiff"/>
+
+\[
+dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v}\, dv;
+\]
+
+\[
+y = f(u, v).
+\]
+
+Take the simplest concrete case. Let
+
+\[    y = u×v.
+\]
+
+What are we to do? If we were to treat $v$ as a
+constant, and differentiate with respect to $u$, we
+should get
+
+\[
+dy_v = v\, du;
+\]
+or if we treat $u$ as a constant, and differentiate with
+respect to $v$, we should have:
+\[
+dy_u = u\, dv.
+\]
+
+
+<p>The little letters here put as subscripts are to show
+which quantity has been taken as constant in the
+operation.
+
+<p>Another way of indicating that the differentiation
+has been performed only <em>partially</em>, that is, has been
+performed only with respect to <em>one</em> of the independent
+
+variables, is to write the differential coefficients with
+Greek deltas, like $\partial$, instead of little $d$. In this way
+\begin{align*}
+\frac{\partial y}{\partial u} &= v, \\
+\frac{\partial y}{\partial v} &= u.
+\end{align*}
+
+<p>If we put in these values for $v$ and $u$ respectively,
+we shall have
+
+\[
+dy_v = \frac{\partial y}{\partial u}\, du, \\
+dy_u = \frac{\partial y}{\partial v}\, dv,
+\]
+<p>which are <em>partial differentials</em>.
+<p>But, if you think of it, you will observe that the
+total variation of $y$ depends on <em>both</em> these things at
+the same time. That is to say, if both are varying,
+the real $dy$ ought to be written
+\[
+dy = \frac{\partial y}{\partial u}\, du + \dfrac{\partial y}{\partial v}\, dv;
+\]
+and this is called a <em>total differential</em>. In some books
+it is written $dy = \left(\dfrac{dy}{du}\right)\, du + \left(\dfrac{dy}{dv}\right)\, dv$.
+
+<p>
+<a name="example1"/><em> Example (1)</em> Find the partial differential coefficients
+of the expression $w = 2ax^2 + 3bxy + 4cy^3$.
+The answers are:
+\[
+\left.
+\begin{aligned}
+\frac{\partial w}{\partial x} &= 4ax + 3by. \\
+\frac{\partial w}{\partial y} &= 3bx + 12cy^2.
+\end{aligned} \right\}
+\]
+
+
+<p>The first is obtained by supposing $y$ constant, the
+second is obtained by supposing $x$ constant; then
+\[
+dw = (4ax+3by)\, dx + (3bx+12cy^2)\, dy.
+\]
+
+<p>
+<a name="example2"/><em> Example (2)</em> Let $z = x^y$. Then, treating first $y$
+and then $x$ as constant, we get in the usual way
+\[
+\left.
+\begin{aligned}
+\dfrac{\partial z}{\partial x} &= yx^{y-1}, \\
+\dfrac{\partial z}{\partial y} &= x^y × \log_\epsilon x,
+\end{aligned}\right\}
+\]
+so that $dz = yx^{y-1}\, dx + x^y \log_\epsilon x \, dy$.
+
+<p>
+<a name="example3"/><em> Example (3)</em> A cone having height $h$ and radius
+of base $r$ has volume $V=\frac{1}{3} \pi r^2 h$. If its height remains
+constant, while $r$ changes, the ratio of change of
+volume, with respect to radius, is different from ratio
+of change of volume with respect to height which
+would occur if the height were varied and the radius
+kept constant, for
+\[
+\left.
+\begin{aligned}
+\frac{\partial V}{\partial r} &= \dfrac{2\pi}{3} rh, \\
+\frac{\partial V}{\partial h} &= \dfrac{\pi}{3} r^2.
+\end{aligned}\right\}
+\]
+
+<p>The variation when both the radius and the height
+change is given by $dV = \dfrac{2\pi}{3} rh\, dV + \dfrac{\pi}{3} r^2\, dh$.
+
+<p>
+<a name="example4"/><em> Example (4)</em> <a name="Example4"/> In the following example $F$ and $f$
+denote two arbitrary functions of any form whatsoever.
+For example, they may be sine-functions, or
+exponentials, or mere algebraic functions of the two
+
+independent variables, $t$ and $x$. This being understood,
+let us take the expression
+\begin{align*}
+                    y &= F(x+at) + f(x-at), \\
+ \text{or,}\;\quad     y &= F(w) + f(v); \\
+ \text{where}\;\quad   w &= x+at,\quad \text{and}\quad v = x-at. \\
+   \text{Then}\;\quad   \frac{\partial y}{\partial x}
+                      &= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial x}
+                       + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial x} \\
+                      &= F'(w) · 1 + f'(v) · 1
+\end{align*}
+(where the figure $1$ is simply the coefficient of $x$ in
+$w$ and $v$)
+\begin{align*}
+ \text{and}\; \      \frac{\partial^2 y}{\partial x^2}
+                      &= F”(w) + f”(v). && \\
+   \text{Also}\; \  \frac{\partial y}{\partial t}
+                      &= \frac{\partial F(w)}{\partial w} · \frac{\partial w}{\partial t}
+                      + \frac{\partial f(v)}{\partial v} · \frac{\partial v}{\partial t} \\
+                      &= F'(w) · a - f'(v) a; \\
+ \text{and}\;    \   \frac{\partial^2 y}{\partial t^2}
+                      &= F”(w)a^2 + f”(v)a^2; \\
+ \text{whence}\;  \  \frac{\partial^2 y}{\partial t^2}
+                      &= a^2\, \frac{\partial^2 y}{\partial x^2}.
+\end{align*}
+
+<p>This differential equation is of immense importance
+in mathematical physics.
+
+<p><h2>Maxima and Minima of Functions of two
+Independent Variables.</h2>
+
+<p>
+<a name="example5"/><em> Example (5)</em> Let us take up again Exercise IX. No. 4.
+
+<p>Let $x$ and $y$ be the length of two of the portions of
+the string. The third is $30-(x+y)$, and the area of the
+
+triangle is $A = \sqrt{s(s-x)(s-y)(s-30+x+y)}$, where
+$s$ is the half perimeter, $15$, so that $A = \sqrt{15P}$, where
+\begin{align*}
+P &= (15-x)(15-y)(x+y-15) \\
+  &= xy^2 + x^2y - 15x^2 - 15y^2 - 45xy + 450x + 450y - 3375.
+\end{align*}
+
+<p>Clearly $A$ is maximum when $P$ is maximum.
+\[
+dP = \dfrac{\partial P}{\partial x}\, dx + \dfrac{\partial P}{\partial y}\, dy.
+\]
+For a maximum (clearly it will not be a minimum in
+this case), one must have simultaneously
+
+\[
+\dfrac{\partial P}{\partial x} = 0 \quad\text{and}\quad
+\dfrac{\partial P}{\partial y} = 0;
+\]
+that is,
+
+\begin{aligned}
+2xy - 30x + y^2 - 45y + 450 &= 0, \\
+2xy - 30y + x^2 - 45x + 450 &= 0.
+\end{aligned}
+
+<p>An immediate solution is $x=y$.
+
+<p>If we now introduce this condition in the value
+of $P$, we find
+\[
+P = (15-x)^2 (2x-15) = 2x^3 - 75x^2 + 900x - 3375.
+\]
+For maximum or minimum, $\dfrac{dP}{dx} = 6x^2 - 150x + 900 = 0$,
+which gives $x=15$ or $x=10$.
+
+<p>Clearly $x=15$ gives minimum area; $x=10$ gives
+the maximum, for $\dfrac{d^2 P}{dx^2} = 12x - 150$, which is $+30$ for
+$x=15$ and $-30$ for $x=10$.
+
+<p>
+<a name="example6"/><em> Example (6)</em> Find the dimensions of an ordinary
+railway coal truck with rectangular ends, so that,
+for a given volume $V$ the area of sides and floor
+together is as small as possible.
+
+
+<p>The truck is a rectangular box open at the top.
+Let $x$ be the length and $y$ be the width; then the
+depth is $\dfrac{V}{xy}$. The surface area is $S=xy + \dfrac{2V}{x} + \dfrac{2V}{y}$.
+\[
+dS = \frac{\partial S}{\partial x}\, dx
+   + \frac{\partial S}{\partial y}\, dy
+   = \left(y - \frac{2V}{x^2}\right) dx
+   + \left(x - \frac{2V}{y^2}\right) dy.
+\]
+For minimum (clearly it won't be a maximum here),
+\[
+y - \frac{2V}{x^2} = 0,\quad
+x - \frac{2V}{y^2} = 0.
+\]
+
+<p>Here also, an immediate solution is $x = y$, so that
+$S = x^2 + \dfrac{4V}{x}\quad$, $\dfrac{dS}{dx}= 2x - \dfrac{4V}{x^2} =0$ for minimum, and
+\[
+x = \sqrt[3]{2V}.
+\]
+
+<p>
+<hr><h3>Exercises XV</h3>
+
+(1) Differentiate the expression $\dfrac{x^3}{3} - 2x^3y - 2y^2x + \dfrac{y}{3}$
+with respect to $x$ alone, and with respect to $y$ alone.
+
+<p>(2) Find the partial differential coefficients with
+respect to $x$, $y$ and $z$, of the expression
+\[
+x^2yz + xy^2z + xyz^2 + x^2y^2z^2.
+\]
+
+<p>(3) Let $r^2 = (x-a)^2 + (y-b)^2 + (z-c)^2$.
+
+<p>Find the value of $\dfrac{\partial r}{\partial x} +
+                   \dfrac{\partial r}{\partial y} +
+                   \dfrac{\partial r}{\partial z}$. Also find the value
+of $\dfrac{\partial^2r}{\partial x^2} +
+    \dfrac{\partial^2r}{\partial y^2} +
+    \dfrac{\partial^2r}{\partial z^2}$.
+
+<p>(4) Find the total differential of $y=u^v$.
+
+
+<p>(5) Find the total differential of $y=u^3 \sin v$; of
+$y = (\sin x)^u$; and of $y = \dfrac{\log_\epsilon u}{v}$.
+
+<p>(6) Verify that the sum of three quantities $x$, $y$, $z$,
+whose product is a constant $k$, is maximum when
+these three quantities are equal.
+
+<p>(7) Find the maximum or minimum of the function
+\[
+u = x + 2xy + y.
+\]
+
+<p>(8) The post-office regulations state that no parcel
+is to be of such a size that its length plus its girth
+exceeds $6$ feet. What is the greatest volume that
+can be sent by post (<em>a</em> ) in the case of a package of
+rectangular cross section; (<em>b</em> ) in the case of a package
+of circular cross section.
+
+<p>(9) Divide $\pi$ into $3$ parts such that the continued
+product of their sines may be a maximum or minimum.
+
+<p>(10) Find the maximum or minimum of $u = \dfrac{\epsilon^{x+y}}{xy}$.
+
+<p>(11) Find maximum and minimum of
+\[
+u = y + 2x - 2 \log_\epsilon y - \log_\epsilon x.
+\]
+
+<p>(12) A telpherage bucket of given capacity has
+the shape of a horizontal isosceles triangular prism
+with the apex underneath, and the opposite face open.
+Find its dimensions in order that the least amount
+of iron sheet may be used in its construction.
+
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(1)   $x^3 - 6x^2 y - 2y^2;\quad \frac{1}{3} - 2x^3 - 4xy$.
+
+<p>(2)   $2xyz + y^2 z + z^2 y + 2xy^2 z^2$;<br>
+     $2xyz + x^2 z + xz^2 + 2x^2 yz^2$;<br>
+     $2xyz + x^2 y + xy^2 + 2x^2 y^2 z$.
+
+<p>(3)   $\dfrac{1}{r} \{ \left(x - a\right) + \left( y - b \right) + \left( z - c \right) \} = \dfrac{ \left( x + y + z \right) - \left( a + b + c \right) }{r}$; $\dfrac{3}{r}$.
+
+<p>(4)   $dy = vu^{v-1}\, du + u^v \log_\epsilon u\, dv$.
+
+<p>(5)   $dy = 3\sin v u^2\, du + u^3 \cos v\, dv$,<br>
+     $dy = u \sin x^{u-1} \cos x\, dx + (\sin x)^u \log_\epsilon \sin x du$,<br>
+     $dy = \dfrac{1}{v}\, \dfrac{1}{u}\, du - \log_\epsilon u \dfrac{1}{v^2}\, dv$.
+
+<p>(7)   Minimum for $x = y = -\frac{1}{2}$.
+
+<p>(8)   (<em>a</em> ) Length $2$ feet, width = depth = $1$ foot, vol. = $2$ cubic
+ feet.
+
+ (<em>b</em> ) Radius = $\dfrac{2}{\pi}$ feet = $7.46$ in., length = $2$ feet, vol. = $2.54$.
+
+<p>(9)    All three parts equal; the product is maximum.
+
+<p>(10)   Minimum for $x = y = 1$.
+
+<p>(11)   Min.: $x = \frac{1}{2}$ and $y = 2$.
+
+<p>(12)   Angle at apex $= 90°$; equal sides = length = $\sqrt[3]{2V}$.
+<br>
+<hr>
+<a href="17.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

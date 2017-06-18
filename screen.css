@@ -1,0 +1,421 @@
+/*
+
+"Dive Into HTML 5" stylesheet
+
+Copyright (c) 2009, Mark Pilgrim, All rights reserved.
+
+Redistribution and use in source and binary forms, with or without modification,
+are permitted provided that the following conditions are met:
+
+* Redistributions of source code must retain the above copyright notice,
+  this list of conditions and the following disclaimer.
+* Redistributions in binary form must reproduce the above copyright notice,
+  this list of conditions and the following disclaimer in the documentation
+  and/or other materials provided with the distribution.
+
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS 'AS IS'
+AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR CONTRIBUTORS BE
+LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+POSSIBILITY OF SUCH DAMAGE.
+
+
+Classname Legend
+
+.f = "fancy"      = first paragraph of each chapter (gets a fancy drop-cap)
+.c = "centered"   = centered footer text (also clears floats)
+.a = "asterism"   = section break
+.v = "navigation" = prev/next navigation links (not breadcrumbs)
+.u = "Unicode"    = text contains Unicode characters (requires special font declaration to accommodate *cough* a certain browser)
+.p = "prompt"     = command-line or interactive shell prompt within code listings
+
+.dc = "drop cap"       = image simulating first-letter initial
+.pp = "pretty print"   = apply syntax highlighting to this code block
+.pf = "padded frame"   = black border with internal padding
+.fr = "framed"         = black border, no padding
+.ss = "screenshot"     = image, floated right, with margin
+.bc = "browser compat" = browser compatibility table (td cells all contain checks, Xs, and asterisks)
+.st = "simple table"   = table with 1px border in body font
+.ho = "headers only"   = on a table row, denotes that this row contains only table headers
+
+.note = "note/caution/important"   = indented block for tips/gotchas/language comparisons
+.baa  = "best available ampersand" = wrapper block for ampersands
+
+.zebra = "zebra stripes" = off-white background color (used for "zebra stripe" tables)
+
+How the fonts are compressed
+
+Fonts are processed through http://www.fontsquirrel.com/fontface/generator to generate new TrueType, WOFF, and EOT Compressed versions.
+Vertical Metrics are fixed, as is the GASP table, and kerning is removed. No X-height Matching is applied.
+Essays 1742 has an em square value of 1024 and is stripped down to Lowercase, Uppercase, Numbers, and the following unicodes:
+0021-002F,003A-003F,0040,005B-005F,007B-007D,2018-2019,201B-201D,201F,2022-2023,2026,2116,219C-219D,21B6-21B7,21DC-21DD,2212,261E,2767.
+Linux Libertine has an em square value of 2048 and is stripped down to Lowercase, Uppercase, Numbers, and the following unicodes:
+0021-002F,003A-003F,0040,005B-005F,007B-007D,2018-2019,201B-201D,201F,2022-2023,2026,2116,219C-219D,21B6-21B7,21DC-21DD,2212,261E,2767.
+
+Acknowledgements & Inspirations
+
+"The Elements of Typographic Style Applied to the Web" ... http://webtypography.net/toc/
+"Use the Best Available Ampersand" ....................... http://simplebits.com/notebook/2008/08/14/ampersands.html
+"Unicode Support in HTML, Fonts, and Web Browsers" ....... http://alanwood.net/unicode/
+"Punctuation" ............................................ http://en.wikipedia.org/wiki/Punctuation
+"Essays 1743" ............................................ http://www.thibault.org/fonts/essays/
+"Libertine" .............................................. http://linuxlibertine.sourceforge.net/
+"CSS Styled Restaurant Menu" ............................. http://www.web-graphics.com/mtarchive/ItalianMenu.html
+*/
+
+/* typography */
+
+.cover{
+  float:right;
+}
+img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+} 
+
+
+@font-face {
+  font-family: "Essays 1743";
+  src: url("f/Essays1743.eot?") format("eot"), url("f/Essays1743.woff") format("woff"), url("f/Essays1743.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Essays 1743";
+  font-weight: bold;
+  src: url("f/Essays1743-bold.eot?") format("eot"), url("f/Essays1743-bold.woff") format("woff"), url("f/Essays1743-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Essays 1743";
+  font-style: italic;
+  src: url("f/Essays1743-italic.eot?") format("eot"), url("f/Essays1743-italic.woff") format("woff"), url("f/Essays1743-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Essays 1743";
+  font-style: italic;
+  font-weight: bold;
+  src: url("f/Essays1743-bold-italic.eot?") format("eot"), url("f/Essays1743-bold-italic.woff") format("woff"), url("f/Essays1743-bold-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Alphabet of Children";
+  src: url("f/Alphabet-of-Children.eot?") format("eot"), url("f/Alphabet-of-Children.woff") format("woff"), url("f/Alphabet-of-Children.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libertine";
+  src: url("f/Libertine.eot?") format("eot"), url("f/Libertine.woff") format("woff"), url("f/Libertine.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libertine";
+  font-weight: bold;
+  src: url("f/Libertine-bold.eot?") format("eot"), url("f/Libertine-bold.woff") format("woff"), url("f/Libertine-bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libertine";
+  font-style: italic;
+  src: url("f/Libertine-italic.eot?") format("eot"), url("f/Libertine-italic.woff") format("woff"), url("f/Libertine-italic.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Libertine";
+  font-style: italic;
+  font-weight: bold;
+  src: url("f/Libertine-bold-italic.eot?") format("eot"), url("f/Libertine-bold-italic.woff") format("woff"), url("f/Libertine-bold-italic.ttf") format("truetype");
+}
+
+/* base */
+
+html {
+  overflow-y: scroll;
+  -webkit-font-smoothing: antialiased;
+}
+html, body {
+  background: #fff;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font: large/1.556 "Libertine", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  word-spacing: 0.1em;
+  max-width: 680px;
+  margin: 0 auto;
+  padding-bottom: 2em;
+}
+pre, kbd, samp, code, var {
+  font: medium/1.75 Consolas, "Andale Mono", Monaco, "Liberation Mono", "Bitstream Vera Sans Mono", "DejaVu Sans Mono", monospace;
+  word-spacing: 0;
+  letter-spacing: 0;
+}
+.a, .u, table.bc tbody td {
+  font: 100%/1 "Arial Unicode MS", FreeSerif, OpenSymbol, "DejaVu Sans", sans-serif;
+}
+.baa {
+  font: oblique 105% Constantia, Baskerville, Palatino, "Palatino Linotype", "URW Palladio L", serif;
+}
+.note {
+  margin: 3.112em 4.94em;
+}
+.note span {
+  display: block;
+  float: left;
+  font-size: 266.7%;
+  line-height: 0.8;
+  margin: 0 0.22em 0 -1.22em;
+}
+.ss span {
+  display: block;
+  text-align: center;
+  border-top: 3px double;
+  border-bottom: 3px double;
+}
+.c {
+  font-size: medium;
+  line-height: 1.75;
+  margin: 1.75em 0;
+}
+.f:first-letter {
+  font-family: "Alphabet of Children";
+  font-size: 8.2em;
+  float: left;
+  margin-right: 0.02em;
+  line-height: 0.75;
+}
+p, ul, ol {
+  font-size: large;
+  margin: 1.556em 0;
+}
+
+/* basics */
+
+.clear {
+  clear: both;
+}
+.c, .a, #toc, form div {
+  clear: both;
+  text-align: center;
+}
+
+#toc ol, #toc li {
+  list-style: none;
+  margin-left: 0;
+  padding-left: 0;
+}
+.a {
+  font-size: xx-large;
+  line-height: .875;
+  text-shadow: 0 0 2px #667;
+}
+.pf, .fr {
+  border: 1px solid;
+}
+.pf {
+  margin: 1.75em 0;
+}
+.pf .inner {
+  min-height: 253px;
+  margin: 0 15px 0 0;
+  padding: 0 154px 1.75em 0;
+  background: white url(i/openclipart.org_johnny_automatic_little_professor.png) bottom right no-repeat;
+}
+.pf .moneybags {
+  min-height: 245px;
+  margin: 0 15px 0 0;
+  padding: 0 190px 1.75em 0;
+  background: white url(i/openclipart.org_johnny_automatic_bag_of_money.png) bottom right no-repeat;
+}
+.pf h4 {
+  margin: 0;
+  padding: 4px;
+  background: black;
+  color: white;
+}
+.ss {
+  float: right;
+  margin: 0 0 1.75em 1.75em;
+  font-size: medium;
+}
+address, cite, dfn, var {
+  font-style: normal;
+}
+sup {
+  font-variant: small-caps;
+  vertical-align: text-top;
+}
+
+/* links */
+
+a {
+  text-decoration: none;
+}
+a:link {
+  color: FireBrick;
+  border-bottom: 1px dotted;
+}
+a:visited {
+  color: RosyBrown;
+  border-bottom: 1px dotted;
+}
+a:link:hover, a:visited:hover {
+  border-bottom: 1px solid;
+}
+.c a {
+  color: inherit;
+}
+
+/* figures and legends */
+
+.legend {
+  font: italic x-large/1.75 "Essays 1743", "Marker Felt", "Kristen ITC", "Viner Hand ITC", "Lucida Handwriting", Amienne, Boopee, "Segoe Print", "Times New Roman", serif;
+  text-shadow: 0 0 1px #667;
+  margin-left: 0.5em;
+  vertical-align: top;
+}
+.arrow {
+  font-size: 200%;
+  line-height: 0.3;
+  vertical-align: sub;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.top {
+  margin-bottom: 0.3em;
+  display: block;
+}
+.bottom {
+  display: block;
+  margin-top: 0;
+  margin-left: 2em;
+}
+
+/* code blocks */
+
+pre {
+  padding-left: 3.5em;
+  white-space: pre; /* CSS2 */
+  white-space: pre-wrap; /* CSS 2.1 */
+  word-wrap: break-word; /* IE */
+}
+pre.ib {
+  padding: 0;
+}
+mark {
+  display: inline-block;
+  background: #ff8;
+  border: 1px dotted #888;
+}
+.p {
+  color: #667;
+}
+
+/* overrides */
+
+li ol, .q, .v span {
+  margin: 0;
+}
+code, var, samp {
+  line-height: inherit !important;
+}
+
+/* headers */
+
+h1, h2, h3, h4, caption, thead th {
+  font-family: "Essays 1743", Palatino, "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  text-shadow: 0 0 1px #667;
+}
+h1 {
+  font-size: 266.7%;
+  line-height: 1.1;
+  text-align: center;
+  width: 100%;
+  margin: 1.49em 0;
+}
+h2 {
+  font-size: 210%;
+  line-height: 1.3125;
+  margin: 1.167em 0;
+  text-align: center;
+  clear: both;
+}
+h3 {
+  font-size: x-large;
+  line-height: 1.167;
+  margin: 1.556em 0;
+  text-align: center;
+}
+h1:before {
+  content: "\2116" counter(h1) ".";
+}
+
+/* video */
+
+video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* browser compatibility and other tables */
+
+.bc, .st {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.bc tbody th, .bc thead th.l, tfoot td {
+  text-align: left;
+}
+
+.bc thead th, .bc td {
+  text-align: center;
+}
+
+tfoot {
+  font-size: small;
+}
+
+.st {
+  border: 1px solid;
+}
+
+.st th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.st tr > th:first-child {
+  padding-left: 5px;
+}
+
+.ho th {
+  border-bottom: 1px solid;
+}
+
+.zebra {
+  background: #eee;
+}
+
+/* asterism styles */
+
+.rotatedFloralHeartBullet:after { content: "\2767" }
+
+.triangularBullet:after { content: "\2023" }
+
+.leftwardsWaveArrow:after  { content: "\219C" }
+.rightwardsWaveArrow:after { content: "\219D" }
+
+.leftwardsSquiggleArrow:after  { content: " \21DC" }
+.rightwardsSquiggleArrow:after { content: "\21DD" }
+
+.whiteRightPointingIndex:after { content: "\261E" }
+
+.anticlockwiseTopSemicircleArrow:after { content: "\21B6" }
+.clockwiseTopSemicircleArrow:after { content: "\21B7" }

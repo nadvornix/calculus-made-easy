@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>When Time Varies | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 8}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>When Time Varies</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Some of the most important problems of the calculus
+are those where time is the independent variable, and
+we have to think about the values of some other
+quantity that varies when the time varies. Some
+things grow larger as time goes on; some other things
+grow smaller. The distance that a train has got from
+its starting place goes on ever increasing as time goes
+on. Trees grow taller as the years go by. Which is
+growing at the greater rate; a plant $12$ inches high
+which in one month becomes $14$ inches high, or a
+tree $12$ feet high which in a year becomes $14$ feet
+high?
+
+<p>In this chapter we are going to make much use
+of the word <em>rate</em>. Nothing to do with poor-rate, or
+water-rate (except that even here the word suggests
+a proportion–a ratio–so many pence in the pound).
+Nothing to do even with birth-rate or death-rate,
+though these words suggest so many births or deaths
+per thousand of the population. When a motor-car
+whizzes by us, we say: What a terrific rate! When
+a spendthrift is flinging about his money, we remark
+that that young man is living at a prodigious rate.
+
+What do we mean by <em>rate</em>? In both these cases we
+are making a mental comparison of something that is
+happening, and the length of time that it takes to
+happen. If the motor-car flies past us going $10$ yards
+per second, a simple bit of mental arithmetic will
+show us that this is equivalent–while it lasts–to a
+rate of $600$ yards per minute, or over $20$ miles per
+hour.
+
+<p>Now in what sense is it true that a speed of
+$10$ yards per second is the same as $600$ yards
+per minute? Ten yards is not the same as $600$ yards,
+nor is one second the same thing as one minute.
+What we mean by saying that the <em>rate</em> is the same,
+is this: that the proportion borne between distance
+passed over and time taken to pass over it, is the
+same in both cases.
+
+<p>Take another example. A man may have only
+a few pounds in his possession, and yet be able to
+spend money at the rate of millions a year–provided
+he goes on spending money at that rate for a few
+minutes only. Suppose you hand a shilling over
+the counter to pay for some goods; and suppose the
+operation lasts exactly one second. Then, during
+that brief operation, you are parting with your money
+at the rate of $1$ shilling per second, which is the
+same rate as £$3$ per minute, or £$180$ per hour, or
+£$4320$ per day, or £$1,576,800$ per year! If you have
+£$10$ in your pocket, you can go on spending money
+at the rate of a million a year for just $5\frac{1}{4}$ minutes.
+
+<p>It is said that Sandy had not been in London
+
+above five minutes when “bang went saxpence.” If
+he were to spend money at that rate all day long,
+say for $12$ hours, he would be spending $6$ shillings
+
+an hour, or £$3$. $12$<em>s</em> . per day, or £$21$. $12$<em>s</em> . a week,
+not counting the Sawbbath.
+
+<p>Now try to put some of these ideas into differential
+notation.
+
+<p>Let $y$ in this case stand for money, and let $t$ stand
+for time.
+
+<p>If you are spending money, and the amount you
+spend in a short time $dt$ be called $dy$, the <em>rate</em> of
+spending it will be $\dfrac{dy}{dt}$, or rather, should be written
+with a minus sign, as $-\dfrac{dy}{dt}$, because $dy$ is a <em>decrement</em>,
+not an increment. But money is not a good example
+for the calculus, because it generally comes and goes
+by jumps, not by a continuous flow–you may earn
+£$200$ a year, but it does not keep running in all
+day long in a thin stream; it comes in only weekly,
+or monthly, or quarterly, in lumps: and your expenditure
+also goes out in sudden payments.
+
+<p>A more apt illustration of the idea of a rate is
+furnished by the speed of a moving body. From
+London (Euston station) to Liverpool is $200$ miles.
+If a train leaves London at $7$ o'clock, and reaches
+Liverpool at $11$ o'clock, you know that, since it has
+travelled $200$ miles in $4$ hours, its average rate must
+have been $50$ miles per hour; because $\frac{200}{4} = \frac{50}{1}$. Here
+you are really making a mental comparison between
+
+the distance passed over and the time taken to pass
+over it. You are dividing one by the other. If $y$ is
+the whole distance, and $t$ the whole time, clearly the
+average rate is $\dfrac{y}{t}$. Now the speed was not actually
+constant all the way: at starting, and during the
+slowing up at the end of the journey, the speed was
+less. Probably at some part, when running downhill,
+the speed was over $60$ miles an hour. If, during
+any particular element of time $dt$, the corresponding
+element of distance passed over was $dy$, then at that
+part of the journey the speed was $\dfrac{dy}{dt}$. The <em>rate</em> at
+which one quantity (in the present instance, <em>distance</em>)
+is changing in relation to the other quantity (in this
+case, <em>time</em>) is properly expressed, then, by stating the
+differential coefficient of one with respect to the other.
+A <em>velocity</em>, scientifically expressed, is the rate at which
+a very small distance in any given direction is being
+passed over; and may therefore be written
+\[
+v = \dfrac{dy}{dt}.
+\]
+
+<p>But if the velocity $v$ is not uniform, then it must
+be either increasing or else decreasing. The rate at
+which a velocity is increasing is called the <em>acceleration</em>.
+If a moving body is, at any particular instant, gaining
+an additional velocity $dv$ in an element of time $dt$,
+then the acceleration $a$ at that instant may be written
+\[
+a = \dfrac{dv}{dt};
+\]
+
+but $dv$ is itself $d\left( \dfrac{dy}{dt} \right)$. Hence we may put
+\[
+a = \frac{d\left( \dfrac{dy}{dt} \right)}{dt};
+\]
+and this is usually written $a = \dfrac{d^2y}{dt^2}$;
+or the acceleration is the second differential coefficient
+of the distance, with respect to time. Acceleration is
+expressed as a change of velocity in unit time, for
+instance, as being so many feet per second per second;
+the notation used being $\text{feet} ÷ \text{second}^2$.
+
+<p>When a railway train has just begun to move, its
+velocity $v$ is small; but it is rapidly gaining speed–it
+is being hurried up, or accelerated, by the effort of the
+engine. So its $\dfrac{d^2y}{dt^2}$ is large. When it has got up its
+top speed it is no longer being accelerated, so that
+then $\dfrac{d^2y}{dt^2}$ has fallen to zero. But when it nears its
+stopping place its speed begins to slow down; may,
+indeed, slow down very quickly if the brakes are put
+on, and during this period of <em>deceleration</em> or slackening
+of pace, the value of $\dfrac{dv}{dt}$, that is, of $\dfrac{d^2y}{dt^2}$ will be negative.
+
+<p>To accelerate a mass $m$ requires the continuous
+application of force. The force necessary to accelerate
+a mass is proportional to the mass, and it is also
+proportional to the acceleration which is being imparted.
+Hence we may write for the force $f$, the
+expression
+\begin{align*}
+f &= ma;\\
+
+ \text{or}\;\;  f &= m \frac{dv}{dt}; \\
+ \text{or}\;\;  f &= m \frac{d^2y}{dt^2}.
+\end{align*}
+
+<p>The product of a mass by the speed at which it is
+going is called its <em>momentum</em>, and is in symbols $mv$.
+If we differentiate momentum with respect to time
+we shall get $\dfrac{d(mv)}{dt}$ for the rate of change of momentum.
+But, since $m$ is a constant quantity, this
+may be written $m \dfrac{dv}{dt}$, which we see above is the same
+as $f$. That is to say, force may be expressed either
+as mass times acceleration, or as rate of change of
+momentum.
+
+<p>Again, if a force is employed to move something
+(against an equal and opposite counter-force), it does
+<em>work</em>; and the amount of work done is measured by
+the product of the force into the distance (in its
+own direction) through which its point of application
+moves forward. So if a force $f$ moves forward
+through a length $y$, the work done (which we may
+call $w$) will be
+\[
+w = f × y;
+\]
+where we take $f$ as a constant force. If the force
+varies at different parts of the range $y$, then we must
+find an expression for its value from point to point.
+If $f$ be the force along the small element of length $dy$,
+the amount of work done will be $f × dy$. But as
+$dy$ is only an element of length, only an element of
+work will be done. If we write $w$ for work, then an
+element of work will be $dw$; and we have
+\begin{align*}
+dw &= f × dy; \\
+\end{align*}
+
+which may be written
+\begin{align*}
+dw &= ma·dy; \\
+\text{ or}\;
+dw &= m \frac{d^2y}{dt^2}· dy; \\
+ \text{or}\;
+dw &= m \frac{dv}{dt}· dy.     \\
+\end{align*}
+Further, we may transpose the expression and write
+\begin{align*}
+\frac{dw}{dy} &= f.
+\end{align*}
+
+<p>This gives us yet a third definition of <em>force</em>; that
+if it is being used to produce a displacement in any
+direction, the force (in that direction) is equal to the
+rate at which work is being done per unit of length
+in that direction. In this last sentence the word
+<em>rate</em> is clearly not used in its time-sense, but in its
+meaning as ratio or proportion.
+
+<p>Sir Isaac Newton, who was (along with Leibniz)
+an inventor of the methods of the calculus, regarded
+all quantities that were varying as <em>flowing</em>; and the
+ratio which we nowadays call the differential coefficient
+he regarded as the rate of flowing, or the
+<em>fluxion</em> of the quantity in question. He did not use
+the notation of the $dy$ and $dx$, and $dt$ (this was due
+to Leibnitz), but had instead a notation of his own.
+If $y$ was a quantity that varied, or “flowed,” then his
+symbol for its rate of variation (or “fluxion”) was
+
+$\dot{y}$. If $x$ was the variable, then its fluxion was called $\dot{x}$.
+The dot over the letter indicated that it had been
+differentiated. But this notation does not tell us
+what is the independent variable with respect to
+which the differentiation has been effected. When
+we see $\dfrac{dy}{dt}$ we know that $y$ is to be differentiated with
+respect to $t$. If we see $\dfrac{dy}{dx}$ we know that $y$ is to be
+differentiated with respect to $x$. But if we see merely $\dot{y}$,
+we cannot tell without looking at the context
+whether this is to mean $\dfrac{dy}{dx}$ or $\dfrac{dy}{dt}$ or $\dfrac{dy}{dz}$, or what is
+the other variable. So, therefore, this fluxional notation
+is less informing than the differential notation,
+and has in consequence largely dropped out of use.
+But its simplicity gives it an advantage if only we
+will agree to use it for those cases exclusively where
+<em>time</em> is the independent variable. In that case $\dot{y}$ will
+mean $\dfrac{dy}{dt}$ and $\dot{u}$ will mean $\dfrac{du}{dt}$;
+and $\ddot{x}$ will mean $\dfrac{d^2x}{dt^2}$.
+
+<p>Adopting this fluxional notation we may write the
+mechanical equations considered in the paragraphs
+above, as follows:
+
+<table>
+<tr><td>distance</td><td>$x$</td></tr>
+<tr><td>velocity</td><td>$v = \dot{x}$</td></tr>
+<tr><td>acceleration</td><td>$a = \dot{v} = \ddot{x}$</td></tr>
+<tr><td>force</td><td>$f = m\dot{v} = m\ddot{x}$</td></tr>
+<tr><td>work</td><td>$w = x × m \ddot{x}$</td></tr>
+</table>
+
+<p><hr>
+
+
+<p>
+<p><em>Examples</em>
+(1) A body moves so that the distance $x$ (in feet),
+which it travels from a certain point $O$, is given by
+the relation $x = 0.2t^2 + 10.4$, where $t$ is the time in
+seconds elapsed since a certain instant. Find the
+velocity and acceleration $5$ seconds after the body
+began to move, and also find the corresponding values
+when the distance covered is $100$ feet. Find also
+the average velocity during the first $10$ seconds of
+its motion. (Suppose distances and motion to the
+right to be positive.)
+
+   Now
+   \[
+x = 0.2t^2 + 10.4 \\
+v = \dot{x}  = \frac{dx}{dt} = 0.4t;\quad\text{and}\quad
+a = \ddot{x} = \frac{d^2x}{dt^2} = 0.4 = \text{constant.}
+\]
+
+<p>When $t = 0$, $x = 10.4$ and $v = 0$. The body started
+from a point $10.4$ feet to the right of the point $O$;
+and the time was reckoned from the instant the
+body started.
+
+<p>When $t = 5$, $v = 0.4 × 5 = 2 \text{ft./sec.}$; $a = 0.4 \text{ft./sec}^2$.
+
+<p>
+When $x = 100$, $100 = 0.2t^2 + 10.4$, or $t^2 = 448$,
+and $t = 21.17 \text{sec.}$; $v = 0.4 × 21.17 = 8.468 \text{ft./sec.}$
+
+<p>When $t = 10$,
+\begin{gather*}
+\text{distance travelled} = 0.2 × 10^2 + 10.4 - 10.4 = 20 \text{ft.} \\
+\text{Average velocity} = \tfrac{20}{10} = 2 \text{ft./sec.}
+\end{gather*}
+
+<p>(It is the same velocity as the velocity at the middle
+of the interval, $t = 5$; for, the acceleration being constant,
+the velocity has varied uniformly from zero
+when $t = 0$ to $4 \text{ft./sec.}$ when $t = 10$.)
+
+
+<p>(2) In the above problem let us suppose
+\begin{gather*}
+x = 0.2t^2 + 3t + 10.4.\\
+v = \dot{x} = \dfrac{dx}{dt} = 0.4t + 3;\quad a = \ddot{x} = \frac{d^2x}{dt^2} = 0.4 = \text{constant}.
+\end{gather*}
+
+<p>When $t = 0$, $x = 10.4$ and $v = 3$ ft./sec, the time is
+reckoned from the instant at which the body passed a
+point $10.4$ ft. from the point $O$, its velocity being then
+already $3$ ft./sec. To find the time elapsed since it began
+moving, let $v = 0$; then $0.4t + 3 = 0$, $t= -\frac{3}{.4}
+= -7.5$ sec.
+The body began moving $7.5$ sec. before time was
+begun to be observed; $5$ seconds after this gives
+$t = -2.5$ and $v = 0.4 × -2.5 + 3 = 2$ ft./sec.
+
+<p>When $x = 100$ ft.,
+\[
+100 = 0.2t^2 + 3t + 10.4;\quad \text{or } t^2 + 15t - 448 = 0;
+\]
+hence $t = 14.95$ sec., $v = 0.4 × 14.95 + 3 = 8.98$ ft./sec.
+
+<p>To find the distance travelled during the $10$ first
+seconds of the motion one must know how far the
+body was from the point $O$ when it started.
+
+<p>When $t = -7.5$,
+\[
+x = 0.2 × (-7.5)^2 - 3 × 7.5 + 10.4 = -0.85 \text{ft}.,
+\]
+that is $0.85$ ft. to the left of the point $O$.
+
+<p>Now, when $t = 2.5$,
+\[
+x = 0.2 × 2.5^2 + 3 × 2.5 + 10.4 = 19.15.
+\]
+
+<p>So, in $10$ seconds, the distance travelled was
+$19.15 + 0.85 = 20$ ft., and
+\[
+\text{the average velocity } = \tfrac{20}{10} = 2 \text{ ft./sec}.
+\]
+
+<p>(3) Consider a similar problem when the distance
+is given by $x = 0.2t^2 - 3t + 10.4$. Then $v = 0.4t - 3$,
+$a = 0.4 = \text{constant}$. When $t = 0$, $x = 10.4$ as before, and
+
+$v = -3$; so that the body was moving in the direction
+opposite to its motion in the previous cases. As the
+acceleration is positive, however, we see that this
+velocity will decrease as time goes on, until it becomes
+zero, when $v = 0$ or $0.4t - 3 = 0$; or $t = 7.5$ sec. After
+this, the velocity becomes positive; and $5$ seconds
+after the body started, $t = 12.5$, and
+\[
+v = 0.4 × 12.5 - 3 = 2 \text{ ft./sec}.
+\]
+
+<p>When $x = 100$,
+\[
+100 = 0.2t^2 - 3t + 10.4,\quad \text{or } t^2 - 15t - 448 = 0, \\
+ \text{and}\;
+t = 29.95;\ v = 0.4 × 29.95 - 3 = 8.98 \text{ft./sec.}
+\]
+
+<p>When $v$ is zero, $x = 0.2 × 7.5^2 - 3 × 7.5 + 10.4 = -0.85$,
+informing us that the body moves back to $0.85$ ft.
+beyond the point $O$ before it stops. Ten seconds later
+\[
+t = 17.5 \text{ and } x = 0.2 × 17.5^2 - 3 × 17.5 + 10.4 = 19.15.
+\]
+$\text{The distance travelled} = .85 + 19.15 = 20.0$, and the
+average velocity is again $2$ ft./sec.
+
+<p>(4) Consider yet another problem of the same sort
+with $x = 0.2t^3 - 3t^2 + 10.4$; $v = 0.6t^2 - 6t$; $a = 1.2t - 6$.
+The acceleration is no more constant.
+
+<p>When $t = 0$, $x = 10.4$, $v = 0$, $a = -6$. The body is
+at rest, but just ready to move with a negative
+acceleration, that is to gain a velocity towards the
+point $O$.
+
+<p>(5) If we have $x = 0.2t^3 - 3t + 10.4$, then $v = 0.6t^2 - 3$,
+and $a = 1.2t$.
+
+<p>When $t = 0$, $x = 10.4$; $v = -3$; $a = 0$.
+
+<p>The body is moving towards the point $O$ with
+
+a velocity of $3$ ft./sec., and just at that instant the
+velocity is uniform.
+
+<p>We see that the conditions of the motion can always
+be at once ascertained from the time-distance equation
+and its first and second derived functions. In the
+last two cases the mean velocity during the first
+$10$ seconds and the velocity $5$ seconds after the start
+will no more be the same, because the velocity is not
+increasing uniformly, the acceleration being no longer
+constant.
+
+<p>(6) The angle $\theta$ (in radians) turned through by a
+wheel is given by $\theta = 3 + 2t - 0.1t^3$, where $t$ is the
+time in seconds from a certain instant; find the
+angular velocity $\omega$ and the angular acceleration $\alpha$,
+(<em>a</em> ) after $1$ second; (<em>b</em> ) after it has performed one
+revolution. At what time is it at rest, and how many
+revolutions has it performed up to that instant?
+
+<p>Writing for the acceleration
+\[
+\omega =  \dot{\theta} = \dfrac{d\theta}{dt} = 2 - 0.3t^2,\quad
+\alpha = \ddot{\theta} = \dfrac{d^2\theta}{dt^2} = -0.6t.
+\]
+
+<p>When $t = 0$, $\theta = 3$; $\omega = 2$ rad./sec.; $\alpha = 0$.
+
+<p>When $t = 1$,
+\[
+\omega = 2 - 0.3 = 1.7 \text{rad./sec.};\quad \alpha = -0.6 \text{rad./sec}^2.
+\]
+
+<p>This is a retardation; the wheel is slowing down.
+
+<p>After $1$ revolution
+\[
+\theta = 2\pi = 6.28;\quad 6.28 = 3 + 2t - 0.1t^3.
+\]
+
+<p>By plotting the graph, $\theta = 3 + 2t - 0.1t^3$, we can get
+the value or values of $t$ for which $\theta = 6.28$; these
+are $2.11$ and $3.03$ (there is a third negative value).
+
+
+<p>When $t = 2.11$,
+\begin{gather*}
+\theta = 6.28;\quad\omega = 2 - 1.34 = 0.66 \text{ rad./sec.}; \\
+\alpha = -1.27 \text{ rad./sec}^2. \\
+\end{gather*}
+When $t = 3.03$,
+\begin{gather*}
+\theta = 6.28;\quad \omega = 2 - 2.754 = -0.754 \text{ rad./sec.}; \\
+\alpha = -1.82 \text{ rad./sec}^2.
+\end{gather*}
+
+<p>The velocity is reversed. The wheel is evidently
+at rest between these two instants; it is at rest when
+$\omega = 0$, that is when $0 = 2 - 0.3t^3$, or when $t = 2.58 \text{sec.}$,
+it has performed
+\[
+\frac{\theta}{2\pi}
+  = \frac{3 + 2 × 2.58 - 0.1 × 2.58^3}{6.28} = 1.025 \text{ revolutions}.
+\]
+
+<p>
+<hr><h3>Exercises V</h3>
+
+<p>
+
+(1) If $y = a + bt^2 + ct^4$; find $\dfrac{dy}{dt}$ and $\dfrac{d^2y}{dt^2}$.
+<p>&nbsp;&nbsp;<em>Ans.</em> $\dfrac{dy}{dt} = 2bt + 4ct^3$;&nbsp;&nbsp; $\dfrac{d^2y}{dt^2} = 2b + 12ct^2$.
+
+<p>(2) A body falling freely in space describes in $t$ seconds
+a space $s$, in feet, expressed by the equation
+$s = 16t^2$. Draw a curve showing the relation between
+$s$ and $t$. Also determine the velocity of the body at
+the following times from its being let drop: $t = 2$
+seconds; $t = 4.6$ seconds; $t = 0.01$ second.
+
+<p>(3) If $x = at - \frac{1}{2}gt^2$; find $\dot{x}$ and $\ddot{x}$.
+
+<p>(4) If a body move according to the law
+\[
+s = 12 - 4.5t + 6.2t^2,
+\]
+find its velocity when $t = 4$ seconds; $s$ being in feet.
+
+
+<p>(5) Find the acceleration of the body mentioned in
+the preceding example. Is the acceleration the same
+for all values of $t$?
+
+<p>(6) The angle $\theta$ (in radians) turned through by
+a revolving wheel is connected with the time $t$ (in
+seconds) that has elapsed since starting; by the law
+\[
+\theta = 2.1 - 3.2t + 4.8t^2.
+\]
+
+<p>Find the angular velocity (in radians per second) of
+that wheel when $1\frac{1}{2}$ seconds have elapsed. Find also
+its angular acceleration.
+
+<p>(7) A slider moves so that, during the first part of
+its motion, its distance $s$ in inches from its starting
+point is given by the expression
+\[
+s = 6.8t^3 - 10.8t;\quad\text{$t$ being in seconds}.
+\]
+
+<p>Find the expression for the velocity and the acceleration
+at any time; and hence find the velocity and the
+acceleration after $3$ seconds.
+
+<p>(8) The motion of a rising balloon is such that its
+height $h$, in miles, is given at any instant by the
+expression $h = 0.5 + \frac{1}{10}\sqrt[3]{t-125}$; $t$ being in seconds.
+
+<p>Find an expression for the velocity and the acceleration
+at any time. Draw curves to show the variation
+of height, velocity and acceleration during the first
+ten minutes of the ascent.
+
+<p>(9) A stone is thrown downwards into water and
+its depth $p$ in metres at any instant $t$ seconds after
+reaching the surface of the water is given by the
+expression
+\[
+p = \frac{4}{4+t^2} + 0.8t - 1.
+\]
+
+
+<p>Find an expression for the velocity and the acceleration
+at any time. Find the velocity and acceleration
+after $10$ seconds.
+
+<p>(10) A body moves in such a way that the spaces
+described in the time $t$ from starting is given by
+$s = t^n$, where $n$ is a constant. Find the value of $n$
+when the velocity is doubled from the $5$th to the $10$th
+second; find it also when the velocity is numerically
+equal to the acceleration at the end of the $10$th second.
+
+
+<p><h3 class="answers">Answers</h3>
+
+<p>(2)   64; 147.2; and 0.32 feet per second.
+
+
+<p>(3)   $x = a - gt$; $\ddot{x} = -g$.
+
+<p>(4)   $45.1$ feet per second.
+
+<p>(5)   $12.4$ feet per second per second.&nbsp;&nbsp; Yes.
+
+<p>(6)  Angular velocity ${} = 11.2$ radians per second; angular
+  acceleration ${}= 9.6$ radians per second per second.
+
+<p>(7)   $v = 20.4t^2 - 10.8$.&nbsp;&nbsp; $a = 40.8t$.&nbsp;&nbsp; $172.8$ in./sec., $122.4 \text{in./sec}^2$.
+
+<p>(8)   $v = \dfrac{1}{30 \sqrt[3]{(t - 125)^2}}$,&nbsp;&nbsp; $a = - \dfrac{1}{45 \sqrt[3]{(t - 125)^5}}$.
+
+<p>(9)   $v = 0.8 - \dfrac{8t}{(4 + t^2)^2}$,&nbsp;&nbsp; $a = \dfrac{24t^2 - 32}{(4 + t^2)^3}$,&nbsp;&nbsp; $0.7926$ and $0.00211$.
+
+<p>(10)   $n = 2$, $n = 11$.
+<p>
+<br>
+<hr>
+<a href="9.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>

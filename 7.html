@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Successive Differentiation | Calculus Made Easy</title>
+<link rel="stylesheet" href="screen.css">
+<style>
+body{counter-reset:h1 7}
+</style>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<h1><br>Successive Differentiation</h1>
+<p class="a rotatedFloralHeartBullet">
+
+<p>Let us try the effect of repeating several times over
+the operation of differentiating a function (see <a href="3.html#function">here</a>).
+Begin with a concrete case.
+
+<p>Let $y = x^5$.
+\begin{alignat*}{3}
+&\text{First differentiation, }  &&5x^4.              &&         \\
+&\text{Second differentiation, } &&5 × 4x^3           &&= 20x^3. \\
+&\text{Third differentiation, }  &&5 × 4 × 3x^2       &&= 60x^2. \\
+&\text{Fourth differentiation, } &&5 × 4 × 3 × 2x     &&= 120x.  \\
+&\text{Fifth differentiation, }  &&5 × 4 × 3 × 2 × 1  &&= 120.   \\
+&\text{Sixth differentiation, }  &&                   &&= 0.
+\end{alignat*}
+
+<p>There is a certain notation, with which we are
+already acquainted (see <a href="3.html#notation">here</a>), used by some writers,
+that is very convenient. This is to employ the
+general symbol $f(x)$ for any function of $x$. Here
+the symbol $f( )$ is read as “function of,” without
+saying what particular function is meant. So the
+statement $y=f(x)$ merely tells us that $y$ is a function
+of $x$, it may be $x^2$ or $ax^n$, or $\cos x$ or any other complicated
+function of $x$.
+
+<p>The corresponding symbol for the differential coefficient
+is $f'(x)$, which is simpler to write than $\dfrac{dy}{dx}$.
+This is called the “derived function” of $x$.
+
+
+<p>Suppose we differentiate over again, we shall get
+the “second derived function” or second differential
+coefficient, which is denoted by $f”(x)$; and so on.
+
+<p>Now let us generalize.
+
+<p>Let $y = f(x) = x^n$.
+\begin{align*}
+   \text{First differentiation,}\;      f'(x) &= nx^{n-1}. \\
+   \text{Second differentiation,}\;    f”(x) &= n(n-1)x^{n-2}. \\
+   \text{Third differentiation,}\;    f”'(x) &= n(n-1)(n-2)x^{n-3}. \\
+   \text{Fourth differentiation,}\;  f””(x) &= n(n-1)(n-2)(n-3)x^{n-4}. \\
+    &\llap{\text{etc.,}} \text{ etc.}
+\end{align*}
+
+<p>But this is not the only way of indicating successive
+differentiations. For,
+\begin{align*}
+ \text{if the original function be}\;               y &= f(x);  \\
+ \text{once differentiating gives}\;    \frac{dy}{dx} &= f'(x); \\
+ \text{twice differentiating gives}\;   \frac{d\left(\dfrac{dy}{dx}\right)}{dx} &= f”(x);
+\end{align*}
+and this is more conveniently written as $\dfrac{d^2y}{(dx)^2}$, or
+more usually $\dfrac{d^2y}{dx^2}$. Similarly, we may write as the
+result of thrice differentiating, $\dfrac{d^3y}{dx^3} = f”'(x)$.
+<hr>
+
+
+<p>
+<p><em>Examples</em>
+Now let us try $y = f(x) = 7x^4 + 3.5x^3 - \frac{1}{2}x^2 + x - 2$.
+\begin{align*}
+\frac{dy}{dx}     &= f'(x) = 28x^3 + 10.5x^2 - x + 1, \\
+\frac{d^2y}{dx^2} &= f”(x) = 84x^2 + 21x - 1,        \\
+\frac{d^3y}{dx^3} &= f”'(x) = 168x + 21,             \\
+\frac{d^4y}{dx^4} &= f””(x) = 168,                  \\
+\frac{d^5y}{dx^5} &= f””'(x) = 0.
+\end{align*}
+In a similar manner if $y = \phi(x) = 3x(x^2 - 4)$,
+\begin{align*}
+\phi'(x)    &= \frac{dy}{dx} = 3\bigl[x × 2x + (x^2 - 4) × 1\bigr] = 3(3x^2 - 4), \\
+\phi”(x)   &= \frac{d^2y}{dx^2} = 3 × 6x = 18x, \\
+\phi”'(x)  &= \frac{d^3y}{dx^3} = 18, \\
+\phi””(x) &= \frac{d^4y}{dx^4} = 0.
+\end{align*}
+
+<p>
+
+<hr><h3>Exercises IV</h3>
+
+<p>Find $\dfrac{dy}{dx}$ and $\dfrac{d^2y}{dx^2}$ for the following expressions:
+<p>(1) $y = 17x + 12x^2$.
+<p>(2) $y = \dfrac{x^2 + a}{x + a}$.
+<p>(3) $y = 1 + \dfrac{x}{1} + \dfrac{x^2}{1×2} + \dfrac{x^3}{1×2×3} + \dfrac{x^4}{1×2×3×4}$.
+<p>(4) Find the 2nd and 3rd derived functions in
+the Exercises III. (<a href="6.html#examples2">here</a>), No. 1 to No. 7, and in the
+Examples given (<a href="6.html#examples3">here</a>), No. 1 to No. 7.
+
+<p><h3 class="answers">Answers</h3>
+<p>(1)  $17 + 24x$;&nbsp;&nbsp; $24$.
+<p>(2)  $\dfrac{x^2 + 2ax - a}{(x + a)^2}$;&nbsp;&nbsp; $\dfrac{2a(a + 1)}{(x + a)^3}$.
+<p>(3)  $1 + x + \dfrac{x^2}{1 × 2} + \dfrac{x^3}{1 × 2 × 3}$;&nbsp;&nbsp; $1 + x + \dfrac{x^2}{1 × 2}$.
+
+<p><em>Exercises III</em>
+
+<p>(4)  (<em>Exercises III.</em> ):
+
+<p>(1) (<em>a</em> ) $\dfrac{d^2 y}{dx^2} = \dfrac{d^3 y}{dx^3} = 1 + x + \frac{1}{2}x^2 + \frac{1}{6} x^3 + \ldots$.
+   <p>(<em>b</em> ) $2a$, $0$.
+   <p>(<em>c</em> ) $2$, $0$.
+   <p>(<em>d</em> ) $6x + 6a$, $6$.
+
+
+<p>(2) $-b$, $0$.
+<p>(3) $2$, $0$.
+<p>(4) $\begin{gathered}[t]
+    56440x^3 - 196212x^2 - 4488x + 8192. \\
+    169320x^2 - 392424x - 4488.
+    \end{gathered}$
+<p>(5) $2$, $0$.
+<p>(6) $371.80453x$, $371.80453$.
+<p>(7) $\dfrac{30}{(3x + 2)^3}$,&nbsp;&nbsp; $-\dfrac{270}{(3x + 2)^4}$.
+
+
+<p><em>Examples</em> ):
+
+<p>(1) $\dfrac{6a}{b^2} x$,&nbsp;&nbsp; $\dfrac{6a}{b^2}$.
+<p>(2) $\dfrac{3a \sqrt{b}} {2 \sqrt{x}} - \dfrac{6b \sqrt[3]{a}}{x^3}$,&nbsp;&nbsp;
+$\dfrac{18b \sqrt[3]{a}}{x^4} - \dfrac{3a \sqrt{b}}{4 \sqrt{x^3}}$.
+
+<p>(3)
+$\dfrac{2}{\sqrt[3]{\theta^8}} - \dfrac{1.056}{\sqrt[5]{\theta^{11}}}$,&nbsp;&nbsp;
+$\dfrac{2.3232}{\sqrt[5]{\theta^{16}}} - \dfrac{16}{3 \sqrt[3]{\theta^{11}}}$.
+
+<p>(4)  $\begin{gathered}[t]
+  810t^4 - 648t^3 + 479.52t^2 - 139.968t + 26.64. \\
+  3240t^3 - 1944t^2 + 959.04t - 139.968.
+  \end{gathered}$
+
+<p>(5)   $12x + 2$, $12$.
+<p>(6) $6x^2 - 9x$,&nbsp;&nbsp; $12x - 9$.
+
+<p>(7)
+$\begin{aligned}[t]
+&\dfrac{3}{4} \left(\dfrac{1}{\sqrt{\theta}} + \dfrac{1}{\sqrt{\theta^5}}\right)
++\dfrac{1}{4} \left(\dfrac{15}{\sqrt{\theta^7}} - \dfrac{1}{\sqrt{\theta^3}}\right). \\
+&\dfrac{3}{8} \left(\dfrac{1}{\sqrt{\theta^5}} - \dfrac{1}{\sqrt{\theta^3}}\right)
+-\dfrac{15}{8}\left(\dfrac{7}{\sqrt{\theta^9}} + \dfrac{1}{\sqrt{\theta^7}}\right).
+\end{aligned}$
+
+
+<br>
+<hr>
+<a href="8.html">Next &rarr;</a><br>
+<a href="/">Main Page &uarr;</a><br>
+
+<script src="j/jquery.js"></script>
+<script src="j/modernizr.js"></script>
+<script src="j/dih5.js"></script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-101178221-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
