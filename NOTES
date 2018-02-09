@@ -1,12 +1,20 @@
 
 # NOTES TO SELF
-
-amazon affiliate account: nadvornik.j.i.r.i@gmail.com + password saved in chrome
+amazon affiliate account: nadvornik.j.i.r.i@gmail.com
 - je potřeba mít amazon účet + účet na amazon associates 
-- blbne jim web: funguje bez diakritiky v firefoxu.
+- blbne amazoni web: ale funguje bez diakritiky v firefoxu.
 - moje associate's id: calculusma00d-20
 - biblio's sharesale is blocked by uBlock
 - na amazonu jsem ještě nevyplnil jak mi budou platit. Ale peníze by tam zatím měly zůstávat.
 
-todo:
-- makefile
+Spuštění:
+deploy
+linchecker
+commit
+dát odkaz na wikipedii
+přečíst pravidla hn a subredditů
+HN
+r/math
+? r/books
+r/mathbooks
+r/FreeEBOOKS
