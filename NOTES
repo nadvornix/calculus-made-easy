@@ -7,14 +7,13 @@ amazon affiliate account: nadvornik.j.i.r.i@gmail.com. UPDATE: not any more
 - biblio's sharesale is blocked by uBlock
 - na amazonu jsem ještě nevyplnil jak mi budou platit. Ale peníze by tam zatím měly zůstávat.
 
-# DEPLOY:
-scp -r calculus-made-easy/* nadvornix_calculusmadeeasy@ssh.phx.nearlyfreespeech.net:/home/public
-
-
-# Launch:
-linchecker
-commit
+# Launching:
 deploy
+  scp -r calculus-made-easy/* nadvornix_calculusmadeeasy@ssh.phx.nearlyfreespeech.net:/home/public
+linchecker
+  linkchecker --check-extern http://calculusmadeeasy.org/
+commit
+push
 
 dát odkaz na wikipedii
 přečíst pravidla hn a subredditů
