@@ -420,14 +420,15 @@ these equations.
 <tr><td>$y$</td><td>$1$</td><td>$1.65$</td><td>$2.71$</td><td>$4.50$</td><td>$7.39$</td></tr>
 </table>
 
-<p>For Fig. 39:
-<table>
-<tr><td>xy$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td><td>$8$</td></tr>
-<tr><td>xx$</td><td>$0$</td><td>$0.69$</td><td>$1.10$</td><td>$1.39$</td><td>$2.08$</td></tr>
-</table>
-
 <a name="figure38">
 <p><img src="33283-t/images/158b.pdf.png-1.png">
+
+<p>For Fig. 39:
+<table>
+<tr><td>$y$</td><td>$1$</td><td>$2$</td><td>$3$</td><td>$4$</td><td>$8$</td></tr>
+<tr><td>$x$</td><td>$0$</td><td>$0.69$</td><td>$1.10$</td><td>$1.39$</td><td>$2.08$</td></tr>
+</table>
+
 <a name="figure39">
 <p><img src="33283-t/images/158a.pdf.png-1.png">
 
@@ -753,14 +754,11 @@ Similarly, if $v=\log_\epsilon(x^3-2)$, $\dfrac{dv}{dx} = \dfrac{3x^2}{x^3-2}$ a
 
 <p>(12) $y=\left(\dfrac{1}{a^x}\right)^{ax}$.
 \begin{align*}
-\log_\epsilon y
-  &= ax(\log_\epsilon 1 - \log_\epsilon a^x) = -ax \log_\epsilon a^x. \\
-\frac{1}{y}\, \frac{dy}{dx}
-  &= -ax × a^x \log_\epsilon a - a \log_\epsilon a^x.  \\
- and
-\frac{dy}{dx}
-  &= -\left(\frac{1}{a^x}\right)^{ax}
-      (x × a^{x+1} \log_\epsilon a + a \log_\epsilon a^x).
+\log y &= -ax \log a^{x} = -ax^{2} \cdot \log a.\\
+\frac{1}{y} \frac{dy}{dx} &= -2ax \cdot \log a\\
+
+- \frac{dy}{dx} &= -2ax\left(\frac{1}{a^{x}}\right)^{ax} \cdot \log a = -2ax \cdot a^{1-ax^{2}} \cdot \log a. 
+
 \end{align*}
 
 <p>Try now the following exercises.
